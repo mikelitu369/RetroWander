@@ -10,11 +10,11 @@ public class SwapMaterial : MonoBehaviour
     {
         if (!player)
         {
-            GetComponentInChildren<SpriteRenderer>().material = player1;
+            foreach(SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>()) sr.material = player1;
         }
         else
         {
-            GetComponentInChildren<SpriteRenderer>().material = player2;
+            foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>()) sr.material = player2;
         }
     }
 }
