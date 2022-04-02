@@ -7,7 +7,9 @@ public abstract class Habilidad
     public enum habilidades
     {
         none,
-        tiroEscopeta
+        tiroEscopeta,
+        metralleta,
+        balasRacimo
     }
 
 

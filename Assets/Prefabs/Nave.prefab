@@ -191,7 +191,7 @@ MonoBehaviour:
   izquierdo: -12.677
   marcador: {fileID: 0}
   iframesTime: 2
-  tiposHabilidades: 010000000000000000000000000000000000000000000000
+  tiposHabilidades: 010000000200000003000000000000000000000000000000
 --- !u!50 &3064958445434658460
 Rigidbody2D:
   serializedVersion: 4
