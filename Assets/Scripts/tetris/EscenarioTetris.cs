@@ -121,6 +121,8 @@ public class EscenarioTetris : MonoBehaviour
                     --huecoRestantes;
                     if(huecoRestantes == 0)
                     {
+                        int jugador1points = 0;
+                        int jugador2points = 1;
                         Debug.Log("proceso normal");
                         for(int j = 0; j < lleno.Length; ++j)
                         {
@@ -128,10 +130,25 @@ public class EscenarioTetris : MonoBehaviour
 
                             lleno[j].SetActive(false);
                             lleno[j].GetComponent<PiezaIndividualTetris>().ComprobarActividadPadre();
+                            if(lleno[j].GetComponent<PiezaIndividualTetris>().jugador == 1)
+                            {
+                                ++jugador1points;
+                            }
+                            else if(lleno[j].GetComponent<PiezaIndividualTetris>().jugador == 0)
+                            {
+                                ++jugador2points;
+                            }
                             lleno[j] = null;
 
                         }
-
+                        if(jugador2points > jugador1points)
+                        {
+                            Debug.Log("ha ganado el jugador dos una linea");
+                        }
+                        else if(jugador2points < jugador1points)
+                        {
+                            Debug.Log("Ha ganado el jugador uno una linea");
+                        }
                         for(int j = 0; j < piezasIndividuales.Count; ++j)
                         {
                             piezasIndividuales[j].GetComponent<PiezaIndividualTetris>().active = true;
