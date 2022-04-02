@@ -128,7 +128,6 @@ public class NaveController : MonoBehaviour
     public void ReciveHit()
     {
         if (iframes) return;
-        BalasManager.instance.ClearScreen(!player2);
         marcador.PerderVida();
         StartCoroutine(Iframes());
     }

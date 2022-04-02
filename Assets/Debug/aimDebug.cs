@@ -15,11 +15,9 @@ public class aimDebug : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.Rotate(Vector3.forward, 90);
+            transform.rotation = Quaternion.LookRotation(-transform.position);
             sc.SpeedSet();
         }
-        transform.rotation = Quaternion.LookRotation(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
-        sc.SpeedSet();
 
     }
 
