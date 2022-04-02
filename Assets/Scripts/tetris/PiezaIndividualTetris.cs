@@ -9,6 +9,9 @@ public class PiezaIndividualTetris : MonoBehaviour
    public  bool active = true;
      public PadreTetris padre;
     public int jugador;
+
+
+    [SerializeField] Sprite[] sprites;
     private void Start()
     {
         vida = vidaMax;
@@ -21,11 +24,11 @@ public class PiezaIndividualTetris : MonoBehaviour
             {
                 if (collision.GetComponent<ShootController>().Player())
                 {
-                    padre.AsignarJugador(0);
+                    padre.AsignarJugador(1);
                 }
                 else
                 {
-                    padre.AsignarJugador(1);
+                    padre.AsignarJugador(0);
                 }
                
             }
@@ -33,16 +36,21 @@ public class PiezaIndividualTetris : MonoBehaviour
             {
                 if (collision.GetComponent<ShootController>().Player())
                 {
-                    jugador = 0;
+                    CambiarColor(1);
                 }
                 else
                 {
-                    jugador = 1;
+                    CambiarColor(0);
                 }
             }
             RecibirDano();
             
         }
+    }
+    public void CambiarColor(int i)
+    {
+        jugador = i;
+        this.GetComponent<SpriteRenderer>().sprite = sprites[i];
     }
     void RecibirDano()
     {
