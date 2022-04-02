@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TrailNave 1
+  m_Name: Explosion 1
   m_Shader: {fileID: -6465566751694194690, guid: fa77bd494787b064794586217c764279,
     type: 3}
   m_ShaderKeywords: 
@@ -38,8 +38,8 @@ Material:
     - Boolean_D0D259A9: 1
     - Vector1_55CF24BC: 0.5
     - Vector1_58562964: 0
-    - Vector1_CA99EA9D: 0.83
-    - Vector1_F5F20152: 1
+    - Vector1_CA99EA9D: 0
+    - Vector1_F5F20152: 0.52
     m_Colors:
-    - Color_2A350E5A: {r: 383.49805, g: 42.164707, b: 50.19608, a: 0}
-    - Color_5F9F655F: {r: 0.42352942, g: 0.11311401, b: 0.10980391, a: 0}
+    - Color_2A350E5A: {r: 7.5471706, g: 0.51368177, b: 0, a: 0}
+    - Color_5F9F655F: {r: 0.4528302, g: 0.04090424, b: 0.019223915, a: 0}
