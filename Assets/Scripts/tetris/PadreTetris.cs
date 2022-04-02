@@ -90,6 +90,7 @@ public class PadreTetris : MonoBehaviour
             piezasHijas[i].transform.localPosition  = posiciones[i];
             piezasHijas[i].GetComponent<PiezaIndividualTetris>().active = true;
             piezasHijas[i].GetComponent<PiezaIndividualTetris>().vida = piezasHijas[i].GetComponent<PiezaIndividualTetris>().vidaMax;
+            piezasHijas[i].GetComponent<PiezaIndividualTetris>().CambiarColor(jugador);
         }
     }
 }
