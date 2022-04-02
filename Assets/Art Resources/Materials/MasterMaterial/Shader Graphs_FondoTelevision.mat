@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_NeonSprites
-  m_Shader: {fileID: -6465566751694194690, guid: d6754a114f5b0cb4fb6d43b165007c40,
+  m_Name: Shader Graphs_FondoTelevision
+  m_Shader: {fileID: -6465566751694194690, guid: 6ec2192875f08124081a0c03ee7b0931,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -20,14 +20,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - MainTex:
-        m_Texture: {fileID: 2800000, guid: cbcd02ab6b31948439bea9dfb56726d9, type: 3}
+    - _SampleTexture2D_95B316D5_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 010fb1593bb628e4495bab4794d6307e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - Texture2D_78063FFE:
-        m_Texture: {fileID: 2800000, guid: cbcd02ab6b31948439bea9dfb56726d9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - Color_861B954A: {r: 5.7658806, g: 6.0262966, b: 57.96227, a: 0}
+    m_Floats:
+    - Vector1_78A4FC82: 6.56
+    - Vector1_F06D2F30: 0.7
+    m_Colors: []
