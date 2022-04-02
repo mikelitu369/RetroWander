@@ -11,7 +11,7 @@ public class EscenarioTetris : MonoBehaviour
 
     [SerializeField] GameObject limite;
 
-    [SerializeField] List<GameObject> piezasASpawnear1, piezasASpawnear2, piezasASpawnear3, piezasASpawnear4;
+    [SerializeField] List<GameObject> piezasASpawnear;
 
     [SerializeField] Transform[] posRaycast;
 
@@ -81,28 +81,20 @@ public class EscenarioTetris : MonoBehaviour
         if(!encontrada)
         {
 
-            switch (randomizador)
+
+            bool noEntra = false;
+            int numero;
+            do
             {
-                //Random.Range(0, piezasASpawnear1.Count)
-                case 0:
-                    p = Instantiate(piezasASpawnear1[Random.Range(0, piezasASpawnear1.Count)], posSpwan[randomizador].position, Quaternion.identity);
-                    p.GetComponent<PadreTetris>().escenario = this;
-                    break;
-                case 1:
-                    p = Instantiate(piezasASpawnear2[Random.Range(0, piezasASpawnear2.Count)], posSpwan[randomizador].position, Quaternion.identity);
-                    p.GetComponent<PadreTetris>().escenario = this;
-                    break;
-                case 2:
-                    p = Instantiate(piezasASpawnear3[Random.Range(0, piezasASpawnear3.Count)], posSpwan[randomizador].position, Quaternion.identity);
-                    p.GetComponent<PadreTetris>().escenario = this;
-                    break;
-                case 3:
-                    p = Instantiate(piezasASpawnear4[Random.Range(0, piezasASpawnear4.Count)], posSpwan[randomizador].position, Quaternion.identity);
-                    p.GetComponent<PadreTetris>().escenario = this;
-                    break;
-            }
+                 numero = Random.Range(0, piezasASpawnear.Count);
+                for (int i = 0; i < piezasASpawnear[numero].GetComponent<PadreTetris>().canales.Count; ++i)
+                {
+                    if (randomizador == piezasASpawnear[numero].GetComponent<PadreTetris>().canales[i]) noEntra = true;
+                }
+            } while (!noEntra);
 
-
+            GameObject padre =  Instantiate(piezasASpawnear[numero], posSpwan[randomizador].position, Quaternion.identity);
+            padre.GetComponent<PadreTetris>().escenario = this;
 
         }
     }
