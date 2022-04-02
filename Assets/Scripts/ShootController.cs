@@ -60,6 +60,10 @@ public class ShootController : MonoBehaviour
         {
             Destroy();
         }
+        else if (collision.CompareTag("limite"))
+        {
+            Destroy();
+        }
     }
     
     public bool Player()
