@@ -9,7 +9,9 @@ public abstract class Habilidad
         none,
         tiroEscopeta,
         metralleta,
-        balasRacimo
+        balasRacimo,
+        balasRencorosas,
+        balasRepulsivas
     }
 
 
@@ -33,5 +35,10 @@ public abstract class Habilidad
     public void ChargeMana()
     {
         mana += ManaCharge;
+    }
+
+    public float Charge()
+    {
+        return (float)mana / (float)coste;
     }
 }

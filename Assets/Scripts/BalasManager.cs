@@ -13,6 +13,8 @@ public class BalasManager : MonoBehaviour
 
     [SerializeField] GameObject bala;
     List<GameObject> balas = new List<GameObject>();
+    [SerializeField] GameObject balaPerf;
+    List<GameObject> balasPerf = new List<GameObject>();
 
     public GameObject NewBala()
     {
@@ -38,7 +40,33 @@ public class BalasManager : MonoBehaviour
         g.SetActive(false);
     }
 
-    public void ClearScreen()
+    public GameObject NewBalaPerf()
+    {
+        GameObject g = null;
+
+        if (balasPerf.Count > 0)
+        {
+            g = balasPerf[0];
+            g.SetActive(true);
+            balasPerf.Remove(g);
+        }
+        else
+        {
+            g = Instantiate(balaPerf, transform);
+        }
+
+        return g;
+    }
+
+    public void DestroyBalaPerf(GameObject g)
+    {
+        balasPerf.Add(g);
+        g.SetActive(false);
+    }
+
+
+    //Depprecated
+    /*public void ClearScreen()
     {
         foreach(ShootController sc in transform.GetComponentsInChildren<ShootController>())
         {
@@ -51,5 +79,5 @@ public class BalasManager : MonoBehaviour
         {
             if (sc.Player() == player && sc.gameObject.activeSelf) DestroyBala(sc.gameObject);
         }
-    }
+    }*/
 }

@@ -19,4 +19,10 @@ public class GodOfGame : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public NaveController GetNave(bool player)
+    {
+        if (nave1.Player2() == player) return nave1;
+        else return nave2;
+    }
 }

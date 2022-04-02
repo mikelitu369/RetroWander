@@ -16,12 +16,12 @@ public class ShootController : MonoBehaviour
         player2 = player;
         if (!player2)
         {
-            GetComponentInChildren<SpriteRenderer>().material = blue;
+            GetComponent<SwapMaterial>().Set(player2);
             speedBase = speedBaseOriginal;
         }
         else
         {
-            GetComponentInChildren<SpriteRenderer>().material = red;
+            GetComponent<SwapMaterial>().Set(player2);
             speedBase = -speedBaseOriginal;
         }
 

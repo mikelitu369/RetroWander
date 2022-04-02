@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NaveController : MonoBehaviour
 {
+    static bool arcade = false;
+
     [SerializeField] float velocidad;
 
     [SerializeField] bool player2;
@@ -23,37 +25,75 @@ public class NaveController : MonoBehaviour
 
     private void Start()
     {
-        if (!player2)
+        if (arcade)
         {
-            arriba = KeyCode.W;
-            abajo = KeyCode.S;
-            derecha = KeyCode.D;
-            izquierda = KeyCode.A;
-            disparo = KeyCode.Q;
-            b1 = KeyCode.U;
-            b2 = KeyCode.I;
-            b3 = KeyCode.O;
-            b4 = KeyCode.J;
-            b5 = KeyCode.K;
-            b6 = KeyCode.L;
+            if (player2)
+            {
+                arriba = KeyCode.W;
+                abajo = KeyCode.S;
+                derecha = KeyCode.D;
+                izquierda = KeyCode.A;
+                disparo = KeyCode.Q;
+                b1 = KeyCode.U;
+                b2 = KeyCode.I;
+                b3 = KeyCode.O;
+                b4 = KeyCode.J;
+                b5 = KeyCode.K;
+                b6 = KeyCode.L;
+            }
+            else
+            {
+                float oldDerecho = derecho;
+                derecho = -izquierdo;
+                izquierdo = -oldDerecho;
+
+                arriba = KeyCode.UpArrow;
+                abajo = KeyCode.DownArrow;
+                derecha = KeyCode.RightArrow;
+                izquierda = KeyCode.LeftArrow;
+                disparo = KeyCode.Return;
+                b1 = KeyCode.Insert;
+                b2 = KeyCode.Home;
+                b3 = KeyCode.PageUp;
+                b4 = KeyCode.Delete;
+                b5 = KeyCode.End;
+                b6 = KeyCode.PageDown;
+            }
         }
         else
         {
-            float oldDerecho = derecho;
-            derecho = -izquierdo;
-            izquierdo = -oldDerecho;
+            if (!player2)
+            {
+                arriba = KeyCode.W;
+                abajo = KeyCode.S;
+                derecha = KeyCode.D;
+                izquierda = KeyCode.A;
+                disparo = KeyCode.Space;
+                b1 = KeyCode.F;
+                b2 = KeyCode.G;
+                b3 = KeyCode.H;
+                b4 = KeyCode.V;
+                b5 = KeyCode.B;
+                b6 = KeyCode.N;
+            }
+            else
+            {
+                float oldDerecho = derecho;
+                derecho = -izquierdo;
+                izquierdo = -oldDerecho;
 
-            arriba = KeyCode.UpArrow;
-            abajo = KeyCode.DownArrow;
-            derecha = KeyCode.RightArrow;
-            izquierda = KeyCode.LeftArrow;
-            disparo = KeyCode.Return;
-            b1 = KeyCode.Insert;
-            b2 = KeyCode.Home;
-            b3 = KeyCode.PageUp;
-            b4 = KeyCode.Delete;
-            b5 = KeyCode.End;
-            b6 = KeyCode.PageDown;
+                arriba = KeyCode.UpArrow;
+                abajo = KeyCode.DownArrow;
+                derecha = KeyCode.RightArrow;
+                izquierda = KeyCode.LeftArrow;
+                disparo = KeyCode.Keypad0;
+                b1 = KeyCode.Keypad4;
+                b2 = KeyCode.Keypad5;
+                b3 = KeyCode.Keypad6;
+                b4 = KeyCode.Keypad1;
+                b5 = KeyCode.Keypad2;
+                b6 = KeyCode.Keypad3;
+            }
         }
 
         for (int i = 0; i < tiposHabilidades.Length; i++)
@@ -70,6 +110,12 @@ public class NaveController : MonoBehaviour
                     break;
                 case Habilidad.habilidades.balasRacimo:
                     habilidades[i] = new BalasRacimo(this);
+                    break;
+                case Habilidad.habilidades.balasRencorosas:
+                    habilidades[i] = new BalasRencorosas(this);
+                    break;
+                case Habilidad.habilidades.balasRepulsivas:
+                    habilidades[i] = new RepulsorBalas(this);
                     break;
             }
         }
@@ -144,5 +190,8 @@ public class NaveController : MonoBehaviour
         return player2;
     }
 
-    
+    public float GetCharge(int index)
+    {
+        return habilidades[index].Charge();
+    }
 }

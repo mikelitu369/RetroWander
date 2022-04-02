@@ -15,7 +15,12 @@ public class aimDebug : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.rotation = Quaternion.LookRotation(-transform.position);
+            Vector3 direccion = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+
+            transform.rotation = Quaternion.identity;
+            Debug.Log(Mathf.Atan2(direccion.x, direccion.y));
+            transform.Rotate(Vector3.forward, Mathf.Rad2Deg * Mathf.Atan2(direccion.y, direccion.x));
+
             sc.SpeedSet();
         }
 
