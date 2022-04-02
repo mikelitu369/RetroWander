@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575975622}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.39, z: 0.25}
+  m_LocalPosition: {x: 0.248, y: -0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7650897476465540030}
@@ -80,7 +80,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.16483599
+        value: 0.16843706
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   izquierdo: -12.677
   marcador: {fileID: 0}
   iframesTime: 2
+  tiposHabilidades: 010000000000000000000000000000000000000000000000
 --- !u!50 &3064958445434658460
 Rigidbody2D:
   serializedVersion: 4
@@ -262,14 +263,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7334834227007115982}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 575975623}
   m_Father: {fileID: 3064958445434658458}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &5211799694478219091
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -309,7 +310,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47cf894c1409afa4da027d45cfc289ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ccb75389396463d449d6d8c8fe25c1d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

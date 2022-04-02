@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ShootController : MonoBehaviour
 {
-    [SerializeField] float speedBase;
+    [SerializeField] float speedBaseOriginal;
+    float speedBase;
     float speed;
     float verticalSpeed;
     protected bool player2;
@@ -16,12 +17,12 @@ public class ShootController : MonoBehaviour
         if (!player2)
         {
             GetComponentInChildren<SpriteRenderer>().material = blue;
-            speed = speedBase;
+            speedBase = speedBaseOriginal;
         }
         else
         {
             GetComponentInChildren<SpriteRenderer>().material = red;
-            speed = -speedBase;
+            speedBase = -speedBaseOriginal;
         }
 
         SpeedSet();
