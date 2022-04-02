@@ -18,8 +18,7 @@ public class aimDebug : MonoBehaviour
             transform.Rotate(Vector3.forward, 90);
             sc.SpeedSet();
         }
-        Vector3 direccion = Camera.main.ScreenToWorldPoint(Input.mousePosition)-transform.position;
-        transform.Rotate(Vector3.forward, 180 * Mathf.Atan2(direccion.y,direccion.x) * Time.deltaTime);
+        transform.rotation = Quaternion.LookRotation(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
         sc.SpeedSet();
 
     }

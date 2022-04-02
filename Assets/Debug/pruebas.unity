@@ -308,6 +308,11 @@ PrefabInstance:
       propertyPath: speedBase
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8282226717441732842, guid: ef2b997b38b88af44a068da1d23b8990,
+        type: 3}
+      propertyPath: speedBaseOriginal
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef2b997b38b88af44a068da1d23b8990, type: 3}
 --- !u!1 &484057473 stripped

@@ -152,6 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024afa155cfe2de4aa5e3be06bc96524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBase: 20
+  speedBaseOriginal: 20
   blue: {fileID: 2100000, guid: 913311d13d50dcf49af7b2eb28708f4d, type: 2}
   red: {fileID: 2100000, guid: afa1f295c36f4154dbd120fd7b0fbb61, type: 2}
