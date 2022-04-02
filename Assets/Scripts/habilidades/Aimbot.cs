@@ -37,7 +37,7 @@ public class Aimbot : ShootController
     protected override void Destroy()
     {
         GameObject explosion = PullFX.instance.NewExplosionDisparo(player2);
-        explosion.transform.position = transform.position;
+        explosion.transform.position = transform.position;  
         Destroy(this.gameObject);
     }
 }

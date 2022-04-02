@@ -29,8 +29,8 @@ public class ShootController : MonoBehaviour
 
     public void SpeedSet()
     {
-        verticalSpeed = Mathf.Sin(transform.rotation.eulerAngles.z * Mathf.Deg2Rad) * speed;
-        speed = Mathf.Cos(transform.rotation.eulerAngles.z * Mathf.Deg2Rad) * speed;
+        verticalSpeed = Mathf.Sin(transform.rotation.eulerAngles.z * Mathf.Deg2Rad) * speedBase;
+        speed = Mathf.Cos(transform.rotation.eulerAngles.z * Mathf.Deg2Rad) * speedBase;
     }
 
     protected virtual void Update()
