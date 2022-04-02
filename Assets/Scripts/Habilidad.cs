@@ -11,7 +11,8 @@ public abstract class Habilidad
         metralleta,
         balasRacimo,
         balasRencorosas,
-        balasRepulsivas
+        balasRepulsivas,
+        disparoPerforante
     }
 
 

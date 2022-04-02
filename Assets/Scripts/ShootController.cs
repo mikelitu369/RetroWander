@@ -9,7 +9,6 @@ public class ShootController : MonoBehaviour
     float speed;
     float verticalSpeed;
     protected bool player2;
-    [SerializeField] Material blue, red;
 
     public void SetPlayer(bool player)
     {

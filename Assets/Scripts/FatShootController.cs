@@ -9,7 +9,6 @@ public class FatShootController : MonoBehaviour
     float speed;
     float verticalSpeed;
     protected bool player2;
-    [SerializeField] Material blue, red;
 
     public void SetPlayer(bool player)
     {
@@ -57,11 +56,7 @@ public class FatShootController : MonoBehaviour
                 Destroy();
                 nave.ReciveHit();
             }
-        }
-        else if (collision.CompareTag("obstaculo"))
-        {
-            Destroy();
-        }
+        }       
         else if (collision.CompareTag("limite"))
         {
             Destroy();
@@ -75,7 +70,7 @@ public class FatShootController : MonoBehaviour
 
     protected virtual void Destroy()
     {
-        GameObject explosion = PullFX.instance.NewExplosionDisparo(player2);
+        GameObject explosion = PullFX.instance.NewExplosionDisparoPerf(player2);
         explosion.transform.position = transform.position;
         BalasManager.instance.DestroyBalaPerf(this.gameObject);
     }

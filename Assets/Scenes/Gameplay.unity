@@ -2307,6 +2307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDisparo: {fileID: 3179943836738631444, guid: fcba4ac20987f0449a8963398dad5203,
     type: 3}
+  explosionDisparoPerf: {fileID: 3179943836738631444, guid: fcba4ac20987f0449a8963398dad5203,
+    type: 3}
 --- !u!4 &1285774291
 Transform:
   m_ObjectHideFlags: 0

@@ -117,6 +117,9 @@ public class NaveController : MonoBehaviour
                 case Habilidad.habilidades.balasRepulsivas:
                     habilidades[i] = new RepulsorBalas(this);
                     break;
+                case Habilidad.habilidades.disparoPerforante:
+                    habilidades[i] = new DisparoPerforante(this);
+                    break;
             }
         }
 

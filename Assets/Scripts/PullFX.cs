@@ -6,7 +6,8 @@ public class PullFX : MonoBehaviour
 {
     public enum FXs
     {
-        explosionDisparo
+        explosionDisparo,
+        explosionDisparoPerf
     }
     public static PullFX instance;
     
@@ -17,6 +18,8 @@ public class PullFX : MonoBehaviour
     }
     [SerializeField] GameObject explosionDisparo;
     List<GameObject> explosionesDisparos = new List<GameObject>();
+    [SerializeField] GameObject explosionDisparoPerf;
+    List<GameObject> explosionesDisparosPerf = new List<GameObject>();
 
     public GameObject NewExplosionDisparo(bool player2 = false)
     {
@@ -45,12 +48,41 @@ public class PullFX : MonoBehaviour
             case FXs.explosionDisparo:
                 DestroyExplosionDisparo(fx);
                 break;
+            case FXs.explosionDisparoPerf:
+                DestroyExplosionDisparoPerf(fx);
+                break;
         }
     }
 
     private  void DestroyExplosionDisparo(GameObject explosion)
     {
         explosionesDisparos.Add(explosion);
+        explosion.SetActive(false);
+    }
+
+    public GameObject NewExplosionDisparoPerf(bool player2 = false)
+    {
+
+        GameObject explosion = null;
+        if (explosionesDisparosPerf.Count > 0)
+        {
+            explosion = explosionesDisparosPerf[0];
+            explosion.SetActive(true);
+            explosionesDisparosPerf.Remove(explosion);
+        }
+        else
+        {
+            explosion = Instantiate(explosionDisparoPerf, transform);
+        }
+
+        explosion.GetComponent<SwapMaterial>().Set(player2);
+
+        return explosion;
+    }
+
+    private void DestroyExplosionDisparoPerf(GameObject explosion)
+    {
+        explosionesDisparosPerf.Add(explosion);
         explosion.SetActive(false);
     }
 }
