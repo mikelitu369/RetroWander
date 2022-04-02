@@ -6,6 +6,7 @@ public class ShootController : MonoBehaviour
 {
     [SerializeField] float speedBase;
     float speed;
+    float verticalSpeed;
     bool player2;
     [SerializeField] Material blue, red;
 
@@ -22,11 +23,15 @@ public class ShootController : MonoBehaviour
             GetComponentInChildren<SpriteRenderer>().material = red;
             speed = -speedBase;
         }
+
+        verticalSpeed = Mathf.Sin(transform.rotation.eulerAngles.z * Mathf.Deg2Rad) * speed;
+        speed = Mathf.Cos(transform.rotation.eulerAngles.z * Mathf.Deg2Rad) * speed;
     }
 
     private void Update()
     {
         transform.position += Vector3.right * speed * Time.deltaTime;
+        transform.position += Vector3.up * verticalSpeed * Time.deltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

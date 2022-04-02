@@ -16,6 +16,10 @@ public class NaveController : MonoBehaviour
     [SerializeField] float iframesTime;
     bool iframes;
 
+    [SerializeField] Habilidad.habilidades[] tiposHabilidades = new Habilidad.habilidades[6];
+    Habilidad[] habilidades = new Habilidad[6];
+
+
 
     private void Start()
     {
@@ -51,13 +55,26 @@ public class NaveController : MonoBehaviour
             b5 = KeyCode.End;
             b6 = KeyCode.PageDown;
         }
+
+        for (int i = 0; i < tiposHabilidades.Length; i++)
+        {
+            switch (tiposHabilidades[i])
+            {
+                case Habilidad.habilidades.none:
+                    break;
+                case Habilidad.habilidades.tiroEscopeta:
+                    habilidades[i] = new TiroEscopeta(this);
+                    break;
+            }
+        }
+
     }
 
     private void Update()
     {
         Movimiento();
         Disparo();
-
+        Habilidades();
     }
 
     void Movimiento()
@@ -80,8 +97,22 @@ public class NaveController : MonoBehaviour
             ShootController sc = g.GetComponent<ShootController>();
 
             g.transform.position = transform.position;
-            sc.SetPlayer(player2);       
+            g.transform.rotation = Quaternion.identity;
+            sc.SetPlayer(player2);
+
+            foreach (Habilidad h in habilidades) if (h != null) h.ChargeMana();
         }
+    }
+
+    void Habilidades()
+    {
+        if (Input.GetKeyDown(b1)) habilidades[0].Active();
+        if (Input.GetKeyDown(b2)) habilidades[1].Active();
+        if (Input.GetKeyDown(b3)) habilidades[2].Active();
+        if (Input.GetKeyDown(b4)) habilidades[3].Active();
+        if (Input.GetKeyDown(b5)) habilidades[4].Active();
+        if (Input.GetKeyDown(b6)) habilidades[5].Active();
+
     }
 
     public void ReciveHit()
@@ -103,4 +134,6 @@ public class NaveController : MonoBehaviour
     {
         return player2;
     }
+
+    
 }
