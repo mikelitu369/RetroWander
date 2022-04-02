@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b9e33fc3db5834c88875a5a5452819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
+  velocidad: 13
   player2: 0
   superior: 6.67
   inferior: -6.73
