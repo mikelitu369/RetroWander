@@ -25,7 +25,7 @@ public class BalasRacimo : Habilidad
                 BalasManager.instance.DestroyBala(sc.gameObject);
                 for (int i = 0; i < balasDividir; i++)
                 {
-                    float angulo = i / 360;
+                    float angulo = i * (360 / balasDividir);
                     GameObject g = BalasManager.instance.NewBala();
                     g.transform.position = position;
                     g.transform.Rotate(Vector3.forward, angulo);
