@@ -31,5 +31,6 @@ public class Marcador : MonoBehaviour
     void End()
     {
         print("End");
+        GodOfGame.instance.RecargarPartida();
     }
 }

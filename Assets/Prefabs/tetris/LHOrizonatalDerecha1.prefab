@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escenario: {fileID: 0}
-  canales: 000000000100000002000000
+  canales: 0000000001000000
   velocidad: 2
   piezasHijas:
   - {fileID: 4084640249622262631}

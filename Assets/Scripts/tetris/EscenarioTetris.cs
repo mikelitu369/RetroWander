@@ -20,6 +20,7 @@ public class EscenarioTetris : MonoBehaviour
 
     GameObject[] lleno = new GameObject[4];
 
+    int ultimapos = 5;
 
     float timer;
 
@@ -58,7 +59,12 @@ public class EscenarioTetris : MonoBehaviour
     public void SpawnPieza()
     {
         GameObject p;
-        int randomizador = Random.Range(0, 4);
+        int randomizador = 0;
+        do
+        {
+            randomizador = Random.Range(0, 4);
+        } while (randomizador == ultimapos);
+        ultimapos = randomizador;
         bool encontrada = false;
         if (poolPiezas.Count > 0)
         {
@@ -71,7 +77,7 @@ public class EscenarioTetris : MonoBehaviour
                     if(randomizador == tP.canales[j])
                     {
                         poolPiezas[i].transform.position = posSpwan[randomizador].position;
-                        poolPiezas[i].GetComponent<PadreTetris>().ResetPieza();
+                        tP.ResetPieza();
                         poolPiezas.RemoveAt(i);
                         encontrada = true;
                     }
@@ -102,9 +108,10 @@ public class EscenarioTetris : MonoBehaviour
     {
         if (i == 0)
         {
-            if(lineasJugador1 > 10)
+            if(lineasJugador1 > 9)
             {
                 Debug.Log("GANA EL JUGADOR 1");
+                GodOfGame.instance.RecargarPartida();
                 return;
             }
             GameObject g = Instantiate(limite, new Vector3(7.99f, 8 - (0.66f +lineasJugador1 * 1.33f), 0), Quaternion.identity);
@@ -113,8 +120,9 @@ public class EscenarioTetris : MonoBehaviour
         }
         else
         {
-            if (lineasJugador2 > 10)
+            if (lineasJugador2 > 9)
             {
+                GodOfGame.instance.RecargarPartida();
                 Debug.Log("GANA EL JUGADOR 2");
                 return;
             }

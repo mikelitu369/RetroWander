@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GodOfGame : MonoBehaviour
 {
@@ -13,5 +14,9 @@ public class GodOfGame : MonoBehaviour
     {
         if (!instance) instance = this;
         else Destroy(this.gameObject);
+    }
+    public void RecargarPartida()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

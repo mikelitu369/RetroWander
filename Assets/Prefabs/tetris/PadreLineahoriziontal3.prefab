@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 9212764753398823928}
   - component: {fileID: 9212764753398823929}
   m_Layer: 0
-  m_Name: PadreLineahoriziontalIzquierda3
+  m_Name: PadreLineahoriziontal3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escenario: {fileID: 0}
-  canales: 0200000002000000
+  canales: 03000000
   velocidad: 2
   piezasHijas:
   - {fileID: 9212764752135893081}
