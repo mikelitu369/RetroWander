@@ -7,7 +7,7 @@ public class ShootController : MonoBehaviour
     [SerializeField] float speedBase;
     float speed;
     float verticalSpeed;
-    bool player2;
+    protected bool player2;
     [SerializeField] Material blue, red;
 
     public void SetPlayer(bool player)
@@ -24,11 +24,16 @@ public class ShootController : MonoBehaviour
             speed = -speedBase;
         }
 
+        SpeedSet();
+    }
+
+    public void SpeedSet()
+    {
         verticalSpeed = Mathf.Sin(transform.rotation.eulerAngles.z * Mathf.Deg2Rad) * speed;
         speed = Mathf.Cos(transform.rotation.eulerAngles.z * Mathf.Deg2Rad) * speed;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         transform.position += Vector3.right * speed * Time.deltaTime;
         transform.position += Vector3.up * verticalSpeed * Time.deltaTime;
@@ -36,7 +41,7 @@ public class ShootController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        BalasManager.instance.DestroyBala(this.gameObject);
+        Destroy();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,7 +51,7 @@ public class ShootController : MonoBehaviour
             NaveController nave = collision.GetComponent<NaveController>();
             if (player2 != nave.Player2())
             {
-                BalasManager.instance.DestroyBala(this.gameObject);
+                Destroy();
                 nave.ReciveHit();
             }
         }
@@ -55,5 +60,12 @@ public class ShootController : MonoBehaviour
     public bool Player()
     {
         return player2;
+    }
+
+    protected virtual void Destroy()
+    {
+        GameObject explosion = PullFX.instance.NewExplosionDisparo(player2);
+        explosion.transform.position = transform.position;
+        BalasManager.instance.DestroyBala(this.gameObject);
     }
 }

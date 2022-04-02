@@ -9,7 +9,7 @@ public class MuerteProgramada : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("MuerteProgramada", tiempoDestruccion);
+        Invoke("Muerte", tiempoDestruccion);
     }
 
     // Update is called once per frame

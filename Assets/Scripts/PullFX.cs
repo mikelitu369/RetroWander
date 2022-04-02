@@ -18,7 +18,7 @@ public class PullFX : MonoBehaviour
     [SerializeField] GameObject explosionDisparo;
     List<GameObject> explosionesDisparos = new List<GameObject>();
 
-    public GameObject NewExplosionDisparo()
+    public GameObject NewExplosionDisparo(bool player2 = false)
     {
 
         GameObject explosion = null;
@@ -33,6 +33,7 @@ public class PullFX : MonoBehaviour
             explosion = Instantiate(explosionDisparo, transform);
         }
 
+        explosion.GetComponent<SwapMaterial>().Set(player2);
 
         return explosion;
     }

@@ -33,7 +33,7 @@ public class BalasManager : MonoBehaviour
     }
 
     public void DestroyBala(GameObject g)
-    {
+    {        
         balas.Add(g);
         g.SetActive(false);
     }
