@@ -183,9 +183,12 @@ public class NaveController : MonoBehaviour
 
     IEnumerator Iframes()
     {
+        this.GetComponentInChildren<Animator>().SetBool("Damage", true);
         iframes = true;
         yield return new WaitForSeconds(iframesTime);
         iframes = false;
+        this.GetComponentInChildren<Animator>().SetBool("Damage", false);
+
     }
 
     public bool Player2()

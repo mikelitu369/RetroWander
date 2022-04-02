@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShootController : MonoBehaviour
 {
     [SerializeField] float speedBaseOriginal;
+    
     float speedBase;
     float speed;
     float verticalSpeed;
@@ -53,6 +54,7 @@ public class ShootController : MonoBehaviour
             {
                 Destroy();
                 nave.ReciveHit();
+                
             }
         }
         else if (collision.CompareTag("obstaculo"))
@@ -69,7 +71,7 @@ public class ShootController : MonoBehaviour
     {
         return player2;
     }
-
+   
     protected virtual void Destroy()
     {
         GameObject explosion = PullFX.instance.NewExplosionDisparo(player2);
