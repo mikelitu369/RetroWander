@@ -11,6 +11,12 @@ public class NaveController : MonoBehaviour
 
     [SerializeField] float superior, inferior, derecho, izquierdo;
 
+    [SerializeField] Marcador marcador;
+
+    [SerializeField] float iframesTime;
+    bool iframes;
+
+
     private void Start()
     {
         if (!player2)
@@ -49,6 +55,13 @@ public class NaveController : MonoBehaviour
 
     private void Update()
     {
+        Movimiento();
+        Disparo();
+
+    }
+
+    void Movimiento()
+    {
         float x = transform.position.x, y = transform.position.y;
         if (Input.GetKey(arriba)) y += velocidad * Time.deltaTime;
         if (Input.GetKey(abajo)) y -= velocidad * Time.deltaTime;
@@ -57,5 +70,38 @@ public class NaveController : MonoBehaviour
         x = Mathf.Clamp(x, izquierdo, derecho);
         y = Mathf.Clamp(y, inferior, superior);
         transform.position = new Vector2(x, y);
+    }
+
+    void Disparo()
+    {
+        if (Input.GetKeyDown(disparo))
+        {
+            GameObject g = BalasManager.instance.NewBala();
+            ShootController sc = g.GetComponent<ShootController>();
+
+            g.transform.position = transform.position;
+            sc.speed = Mathf.Abs(sc.speed);
+            sc.player2 = player2;
+            if (player2) sc.speed *= -1;            
+        }
+    }
+
+    public void ReciveHit()
+    {
+        if (iframes) return;
+        marcador.PerderVida();
+        StartCoroutine(Iframes());
+    }
+
+    IEnumerator Iframes()
+    {
+        iframes = true;
+        yield return new WaitForSeconds(iframesTime);
+        iframes = false;
+    }
+
+    public bool Player2()
+    {
+        return player2;
     }
 }
