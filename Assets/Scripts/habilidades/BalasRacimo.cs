@@ -33,6 +33,22 @@ public class BalasRacimo : Habilidad
                 }
             }
         }
+        foreach (FatShootController sc in BalasManager.instance.transform.GetComponentsInChildren<FatShootController>())
+        {
+            if (sc.gameObject.activeSelf && sc.Player() == nave.Player2())
+            {
+                Vector3 position = sc.transform.position;
+                BalasManager.instance.DestroyBalaPerf(sc.gameObject);
+                for (int i = 0; i < balasDividir; i++)
+                {
+                    float angulo = i * (360 / balasDividir);
+                    GameObject g = BalasManager.instance.NewBalaPerf();
+                    g.transform.position = position;
+                    g.transform.Rotate(Vector3.forward, angulo);
+                    g.GetComponent<FatShootController>().SetPlayer(nave.Player2(), true);
+                }
+            }
+        }
 
         return true;
     }

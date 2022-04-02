@@ -20,27 +20,58 @@ public class PiezaIndividualTetris : MonoBehaviour
     {
         if (collision.CompareTag("bala"))
         {
-            if (padre.active)
+            if (collision.GetComponent<ShootController>())
             {
-                if (collision.GetComponent<ShootController>().Player())
+
+
+                if (padre.active)
                 {
-                    padre.AsignarJugador(1);
+                    if (collision.GetComponent<ShootController>().Player())
+                    {
+                        padre.AsignarJugador(1);
+                    }
+                    else
+                    {
+                        padre.AsignarJugador(0);
+                    }
+
                 }
                 else
                 {
-                    padre.AsignarJugador(0);
+                    if (collision.GetComponent<ShootController>().Player())
+                    {
+                        CambiarColor(1);
+                    }
+                    else
+                    {
+                        CambiarColor(0);
+                    }
                 }
-               
             }
-            else
+            else if (collision.GetComponent<FatShootController>())
             {
-                if (collision.GetComponent<ShootController>().Player())
+                if (padre.active)
                 {
-                    CambiarColor(1);
+                    if (collision.GetComponent<FatShootController>().Player())
+                    {
+                        padre.AsignarJugador(1);
+                    }
+                    else
+                    {
+                        padre.AsignarJugador(0);
+                    }
+
                 }
                 else
                 {
-                    CambiarColor(0);
+                    if (collision.GetComponent<FatShootController>().Player())
+                    {
+                        CambiarColor(1);
+                    }
+                    else
+                    {
+                        CambiarColor(0);
+                    }
                 }
             }
             RecibirDano();

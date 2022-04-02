@@ -48,6 +48,7 @@ public class BalasManager : MonoBehaviour
         {
             g = balasPerf[0];
             g.SetActive(true);
+            g.gameObject.transform.rotation = Quaternion.identity;
             balasPerf.Remove(g);
         }
         else

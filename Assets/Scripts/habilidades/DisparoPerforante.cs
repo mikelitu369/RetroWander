@@ -17,7 +17,7 @@ public class DisparoPerforante : Habilidad
         GameObject g = BalasManager.instance.NewBalaPerf();
         g.transform.position = nave.transform.position;
 
-        g.GetComponent<FatShootController>().SetPlayer(nave.Player2());
+        g.GetComponent<FatShootController>().SetPlayer(nave.Player2(), true);
 
         return true;
     }
