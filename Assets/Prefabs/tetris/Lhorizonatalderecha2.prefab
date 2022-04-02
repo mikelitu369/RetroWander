@@ -1,0 +1,383 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6558695851449176024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6558695851449176022}
+  - component: {fileID: 6558695851449176023}
+  m_Layer: 0
+  m_Name: Lhorizonatalderecha2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6558695851449176022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558695851449176024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8541032052871065701}
+  - {fileID: 8541032052179583144}
+  - {fileID: 8541032051619340756}
+  - {fileID: 8541032053265897162}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6558695851449176023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558695851449176024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b06a85b1bbf3f0478c847df55c9d9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escenario: {fileID: 0}
+  canales: 03000000
+  velocidad: 2
+  piezasHijas:
+  - {fileID: 8541032052871065707}
+  - {fileID: 8541032052179583142}
+  - {fileID: 8541032051619340762}
+  - {fileID: 8541032053265897156}
+  jugador: 2
+  active: 0
+--- !u!1001 &6558695851153085895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6558695851449176022}
+    m_Modifications:
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473373, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_Name
+      value: piezaTetrisHIja (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7334ebf707b9ad2448469357a3f13312, type: 3}
+--- !u!1 &8541032051619340762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3279460858508473373, guid: 7334ebf707b9ad2448469357a3f13312,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558695851153085895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8541032051619340756 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558695851153085895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6558695851648234683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6558695851449176022}
+    m_Modifications:
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473373, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_Name
+      value: piezaTetrisHIja (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7334ebf707b9ad2448469357a3f13312, type: 3}
+--- !u!1 &8541032052179583142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3279460858508473373, guid: 7334ebf707b9ad2448469357a3f13312,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558695851648234683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8541032052179583144 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558695851648234683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6558695852274812022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6558695851449176022}
+    m_Modifications:
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473373, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_Name
+      value: piezaTetrisHIja
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7334ebf707b9ad2448469357a3f13312, type: 3}
+--- !u!1 &8541032052871065707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3279460858508473373, guid: 7334ebf707b9ad2448469357a3f13312,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558695852274812022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8541032052871065701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558695852274812022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6558695852667462361
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6558695851449176022}
+    m_Modifications:
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279460858508473373, guid: 7334ebf707b9ad2448469357a3f13312,
+        type: 3}
+      propertyPath: m_Name
+      value: piezaTetrisHIja (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7334ebf707b9ad2448469357a3f13312, type: 3}
+--- !u!1 &8541032053265897156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3279460858508473373, guid: 7334ebf707b9ad2448469357a3f13312,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558695852667462361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8541032053265897162 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3279460858508473363, guid: 7334ebf707b9ad2448469357a3f13312,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558695852667462361}
+  m_PrefabAsset: {fileID: 0}
