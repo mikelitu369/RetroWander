@@ -102,24 +102,24 @@ public class EscenarioTetris : MonoBehaviour
     {
         if (i == 0)
         {
-            GameObject g = Instantiate(limite, new Vector3(7.99f, 8 - (0.66f +lineasJugador1 * 1.33f), 0), Quaternion.identity);
-            ++lineasJugador1;
-            if(lineasJugador1 > 11)
+            if(lineasJugador1 > 10)
             {
                 Debug.Log("GANA EL JUGADOR 1");
                 return;
             }
+            GameObject g = Instantiate(limite, new Vector3(7.99f, 8 - (0.66f +lineasJugador1 * 1.33f), 0), Quaternion.identity);
+            ++lineasJugador1;
             nave2.LimitarTop(lineasJugador1);
         }
         else
         {
-            GameObject g = Instantiate(limite, new Vector3(-7.99f, 8 - (0.66f + lineasJugador2 * 1.33f), 0), Quaternion.identity);
-            ++lineasJugador2;
-            if (lineasJugador2 > 11)
+            if (lineasJugador2 > 10)
             {
                 Debug.Log("GANA EL JUGADOR 2");
                 return;
             }
+            GameObject g = Instantiate(limite, new Vector3(-7.99f, 8 - (0.66f + lineasJugador2 * 1.33f), 0), Quaternion.identity);
+            ++lineasJugador2;
             nave1.LimitarTop(lineasJugador2);
         }
     }

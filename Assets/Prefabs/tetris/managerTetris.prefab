@@ -290,7 +290,7 @@ MonoBehaviour:
   - {fileID: 5319345091308044389}
   limite: {fileID: 4742365323662348044, guid: 58377341531b18f409f79b7200a6feca, type: 3}
   piezasASpawnear:
-  - {fileID: 554319613154129798, guid: 0a01f2d731d314440b1e82dcd6913382, type: 3}
+  - {fileID: 1526002209371802836, guid: 5791faa31f06ead4f8d01740db8df460, type: 3}
   - {fileID: 5062323430832814142, guid: c1e1cfeb2cdc9de4e87c02248ecda3c6, type: 3}
   - {fileID: 8417937328441728456, guid: a63b6762cce7f4343a075dea8c22a09f, type: 3}
   - {fileID: 1662726372547454685, guid: 6850b68333bcf834d9a0dbe11ccd3255, type: 3}
@@ -299,6 +299,9 @@ MonoBehaviour:
   - {fileID: 6262671274577750258, guid: 8dbabf3ae4408b24792edff17623b4b6, type: 3}
   - {fileID: 345655844183096029, guid: 42df236bbf25a6e45968477b6576ad6e, type: 3}
   - {fileID: 9212764753398823926, guid: 5c97d3d841f823048be0e0592777f8f5, type: 3}
+  - {fileID: 6558695851449176024, guid: 21b121bcdd88b55458d527c776262646, type: 3}
+  - {fileID: 1888445459288262812, guid: e0ca3c13091ce0b40937ce3e285d4fe0, type: 3}
+  - {fileID: 8956259088153217772, guid: 090327ccb0cea77448c70d38e2fd5784, type: 3}
   posRaycast:
   - {fileID: 1779323609}
   - {fileID: 275300814}
