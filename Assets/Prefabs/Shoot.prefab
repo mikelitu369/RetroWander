@@ -92,9 +92,10 @@ GameObject:
   - component: {fileID: 3474765156341041308}
   - component: {fileID: 1830537646686382642}
   - component: {fileID: 8282226717441732842}
+  - component: {fileID: 2600708580269789057}
   m_Layer: 0
   m_Name: Shoot
-  m_TagString: Untagged
+  m_TagString: bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,3 +156,17 @@ MonoBehaviour:
   speedBaseOriginal: 20
   blue: {fileID: 2100000, guid: 913311d13d50dcf49af7b2eb28708f4d, type: 2}
   red: {fileID: 2100000, guid: afa1f295c36f4154dbd120fd7b0fbb61, type: 2}
+--- !u!114 &2600708580269789057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529394369829630065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adb13557e299e74fb4f8a1a60f8f0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 2100000, guid: 913311d13d50dcf49af7b2eb28708f4d, type: 2}
+  player2: {fileID: 2100000, guid: afa1f295c36f4154dbd120fd7b0fbb61, type: 2}

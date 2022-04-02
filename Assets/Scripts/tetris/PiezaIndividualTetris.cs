@@ -18,7 +18,7 @@ public class PiezaIndividualTetris : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<ShootController>())
+        if (collision.CompareTag("bala"))
         {
             if (padre.active)
             {
