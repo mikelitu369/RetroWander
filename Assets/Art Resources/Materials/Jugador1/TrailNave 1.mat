@@ -36,8 +36,10 @@ Material:
     - Boolean_2D595493: 1
     - Boolean_4C4FA31C: 1
     - Boolean_D0D259A9: 1
-    - Vector1_CA99EA9D: 0
-    - Vector1_F5F20152: 0.52
+    - Vector1_55CF24BC: 0.5
+    - Vector1_58562964: 0
+    - Vector1_CA99EA9D: 0.83
+    - Vector1_F5F20152: 1
     m_Colors:
-    - Color_2A350E5A: {r: 2.6352937, g: 4.946919, b: 23.968628, a: 0}
-    - Color_5F9F655F: {r: 0.38096112, g: 0.10980391, b: 0.42352942, a: 0}
+    - Color_2A350E5A: {r: 383.49805, g: 42.164707, b: 50.19608, a: 0}
+    - Color_5F9F655F: {r: 0.42352942, g: 0.11311401, b: 0.10980391, a: 0}
