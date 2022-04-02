@@ -55,6 +55,10 @@ public class ShootController : MonoBehaviour
                 nave.ReciveHit();
             }
         }
+        else if (collision.CompareTag("obstaculo"))
+        {
+            Destroy();
+        }
     }
     
     public bool Player()

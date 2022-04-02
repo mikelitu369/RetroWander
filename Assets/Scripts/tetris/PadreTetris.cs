@@ -9,7 +9,7 @@ public class PadreTetris : MonoBehaviour
 
     public List<int> canales;
 
-    [SerializeField] float velocidad;
+    public float velocidad;
     [SerializeField] List<GameObject> piezasHijas;
 
 
@@ -28,13 +28,13 @@ public class PadreTetris : MonoBehaviour
         for(int i = 0; i < piezasHijas.Count; ++i)
         {
             piezasHijas[i].GetComponent<PiezaIndividualTetris>().padre = this;
-            posiciones.Add(piezasHijas[i].transform.position);
+            posiciones.Add(piezasHijas[i].transform.localPosition);
         }
     }
 
     private void Update()
     {
-        if(active)this.transform.position += new Vector3(0, -1, 0) * velocidad * Time.deltaTime;
+        //if(active)this.transform.position += new Vector3(0, -1, 0) * velocidad * Time.deltaTime;
     }
 
     public void ComprobarActividad()
@@ -57,11 +57,24 @@ public class PadreTetris : MonoBehaviour
 
         for (int i = 0; i < piezasHijas.Count; ++i)
         {
+            if (piezasHijas[i].activeSelf)
+            {
 
-            escenario.piezasIndividuales.Add(piezasHijas[i]);
+
+                piezasHijas[i].GetComponent<PiezaIndividualTetris>().active = active;
+                escenario.piezasIndividuales.Add(piezasHijas[i]);
+            }
         }
 
         
+    }
+    public void AsignarJugador(int zjugador_)
+    {
+        jugador = zjugador_;
+        for (int i = 0; i < piezasHijas.Count; ++i)
+        {
+            if (piezasHijas[i].activeSelf) piezasHijas[i].GetComponent<PiezaIndividualTetris>().jugador = jugador;
+        }
     }
     public void ResetPieza()
     {
@@ -72,7 +85,10 @@ public class PadreTetris : MonoBehaviour
         for (int i = 0; i < piezasHijas.Count; ++i)
         {
 
-            piezasHijas[i].transform.position = posiciones[i];
+            piezasHijas[i].SetActive(true);
+            piezasHijas[i].transform.localPosition  = posiciones[i];
+            piezasHijas[i].GetComponent<PiezaIndividualTetris>().active = true;
+            piezasHijas[i].GetComponent<PiezaIndividualTetris>().vida = piezasHijas[i].GetComponent<PiezaIndividualTetris>().vidaMax;
         }
     }
 }
