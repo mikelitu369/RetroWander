@@ -1901,6 +1901,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 931737786}
     m_Modifications:
+    - target: {fileID: 5319345090415955893, guid: 87a0545221ca1d74081a49246683ecc2,
+        type: 3}
+      propertyPath: piezasASpawnear.Array.data[0]
+      value: 
+      objectReference: {fileID: 554319613154129798, guid: 5bf51f6ec0f53be449c798f458be8877,
+        type: 3}
     - target: {fileID: 5319345090415955894, guid: 87a0545221ca1d74081a49246683ecc2,
         type: 3}
       propertyPath: m_RootOrder

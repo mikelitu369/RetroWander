@@ -60,7 +60,6 @@ public class PadreTetris : MonoBehaviour
             if (piezasHijas[i].activeSelf)
             {
 
-
                 piezasHijas[i].GetComponent<PiezaIndividualTetris>().active = active;
                 escenario.piezasIndividuales.Add(piezasHijas[i]);
             }
