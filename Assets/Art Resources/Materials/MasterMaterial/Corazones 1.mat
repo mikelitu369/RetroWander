@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_ShaderNavesNeaon
+  m_Name: Corazones 1
   m_Shader: {fileID: -6465566751694194690, guid: 805e865f3604117498ec1e241dfda502,
     type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,17 +21,13 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - MainTex:
-        m_Texture: {fileID: 2800000, guid: 444fc889858c19a44ad977d49725b5e3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 10748e819f7ec0c449804c1770a00126, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_78063FFE:
-        m_Texture: {fileID: 2800000, guid: 76a3d8d49f2b0014f8e53c4699345f54, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_C5A8CB39:
-        m_Texture: {fileID: 2800000, guid: 444fc889858c19a44ad977d49725b5e3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 10748e819f7ec0c449804c1770a00126, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_861B954A: {r: 22.566256, g: 0, b: 0, a: 0}
+    - Color_861B954A: {r: 0.7825246, g: 0.8147292, b: 3.858028, a: 0}
