@@ -65,6 +65,12 @@ public class NaveController : MonoBehaviour
                 case Habilidad.habilidades.tiroEscopeta:
                     habilidades[i] = new TiroEscopeta(this);
                     break;
+                case Habilidad.habilidades.metralleta:
+                    habilidades[i] = new Metralleta(this);
+                    break;
+                case Habilidad.habilidades.balasRacimo:
+                    habilidades[i] = new BalasRacimo(this);
+                    break;
             }
         }
 

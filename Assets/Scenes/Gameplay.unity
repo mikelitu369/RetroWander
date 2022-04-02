@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 143746491}
   m_Layer: 0
   m_Name: limite (1)
-  m_TagString: Untagged
+  m_TagString: limite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1588,11 +1588,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6794550042198834622, guid: 4588fd6db4950ab41b722af14bdc25f0,
         type: 3}
-    - target: {fileID: 3064958445434658457, guid: d9c7387fdadd4db47a1925fc4acb3e60,
-        type: 3}
-      propertyPath: tiposHabilidades.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3064958445434658458, guid: d9c7387fdadd4db47a1925fc4acb3e60,
         type: 3}
       propertyPath: m_RootOrder
@@ -2455,7 +2450,7 @@ GameObject:
   - component: {fileID: 1811885800}
   m_Layer: 0
   m_Name: limite (2)
-  m_TagString: Untagged
+  m_TagString: limite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2736,7 +2731,7 @@ GameObject:
   - component: {fileID: 1992812730}
   m_Layer: 0
   m_Name: limite
-  m_TagString: Untagged
+  m_TagString: limite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3061,7 +3056,7 @@ GameObject:
   - component: {fileID: 2070409458}
   m_Layer: 0
   m_Name: limite
-  m_TagString: Untagged
+  m_TagString: limite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
