@@ -9,6 +9,7 @@ public class EscenarioTetris : MonoBehaviour
 
     [SerializeField] Transform[] posSpwan;
 
+    [SerializeField] GameObject limite;
 
     [SerializeField] List<GameObject> piezasASpawnear1, piezasASpawnear2, piezasASpawnear3, piezasASpawnear4;
 
@@ -22,15 +23,18 @@ public class EscenarioTetris : MonoBehaviour
 
     float timer;
 
-
+    int lineasJugador1 = 0, lineasJugador2 = 0;
 
    public  List<GameObject> poolPiezas;
 
     public List<GameObject> piezasIndividuales;
+    NaveController nave1, nave2;
 
     private void Start()
     {
-        
+        nave1 = GodOfGame.instance.nave1;
+        nave2 = GodOfGame.instance.nave2;
+
         piezasIndividuales = new List<GameObject>();
         poolPiezas = new List<GameObject>();
         timer = 0;
@@ -102,7 +106,31 @@ public class EscenarioTetris : MonoBehaviour
 
         }
     }
-
+    public void AnadirLinea(int i)
+    {
+        if (i == 0)
+        {
+            GameObject g = Instantiate(limite, new Vector3(7.99f, 8 - (0.66f +lineasJugador1 * 1.33f), 0), Quaternion.identity);
+            ++lineasJugador1;
+            if(lineasJugador1 > 11)
+            {
+                Debug.Log("GANA EL JUGADOR 1");
+                return;
+            }
+            nave2.LimitarTop(lineasJugador1);
+        }
+        else
+        {
+            GameObject g = Instantiate(limite, new Vector3(-7.99f, 8 - (0.66f + lineasJugador2 * 1.33f), 0), Quaternion.identity);
+            ++lineasJugador2;
+            if (lineasJugador2 > 11)
+            {
+                Debug.Log("GANA EL JUGADOR 2");
+                return;
+            }
+            nave1.LimitarTop(lineasJugador2);
+        }
+    }
     public void LanzarRaycast()
     {
         if (huecoRestantes <= 0) return;
@@ -121,6 +149,8 @@ public class EscenarioTetris : MonoBehaviour
                     --huecoRestantes;
                     if(huecoRestantes == 0)
                     {
+                        int jugador1points = 0;
+                        int jugador2points = 0;
                         Debug.Log("proceso normal");
                         for(int j = 0; j < lleno.Length; ++j)
                         {
@@ -128,10 +158,27 @@ public class EscenarioTetris : MonoBehaviour
 
                             lleno[j].SetActive(false);
                             lleno[j].GetComponent<PiezaIndividualTetris>().ComprobarActividadPadre();
+                            if(lleno[j].GetComponent<PiezaIndividualTetris>().jugador == 1)
+                            {
+                                ++jugador1points;
+                            }
+                            else if(lleno[j].GetComponent<PiezaIndividualTetris>().jugador == 0)
+                            {
+                                ++jugador2points;
+                            }
                             lleno[j] = null;
 
                         }
-
+                        if(jugador2points > jugador1points)
+                        {
+                            Debug.Log("ha ganado el jugador dos una linea");
+                            AnadirLinea(0);
+                        }
+                        else if(jugador2points < jugador1points)
+                        {
+                            Debug.Log("Ha ganado el jugador uno una linea");
+                            AnadirLinea(1);
+                        }
                         for(int j = 0; j < piezasIndividuales.Count; ++j)
                         {
                             piezasIndividuales[j].GetComponent<PiezaIndividualTetris>().active = true;
