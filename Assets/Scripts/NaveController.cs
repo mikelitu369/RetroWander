@@ -77,6 +77,10 @@ public class NaveController : MonoBehaviour
         Habilidades();
     }
 
+    public void LimitarTop(int i)
+    {
+        superior = 6.67f - (1.33f * i);
+    }
     void Movimiento()
     {
         float x = transform.position.x, y = transform.position.y;
