@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class ShootController : MonoBehaviour
 {
-    public float speed;
-    public bool player2;
+    [SerializeField] float speedBase;
+    float speed;
+    bool player2;
+
+    public void SetPlayer(bool player)
+    {
+        player2 = player;
+        if (!player2)
+        {
+            speed = speedBase;
+        }
+        else
+        {
+            speed = -speedBase;
+        }
+    }
 
     private void Update()
     {
@@ -28,5 +42,10 @@ public class ShootController : MonoBehaviour
                 nave.ReciveHit();
             }
         }
+    }
+    
+    public bool Player()
+    {
+        return player2;
     }
 }

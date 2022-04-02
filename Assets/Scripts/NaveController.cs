@@ -80,15 +80,14 @@ public class NaveController : MonoBehaviour
             ShootController sc = g.GetComponent<ShootController>();
 
             g.transform.position = transform.position;
-            sc.speed = Mathf.Abs(sc.speed);
-            sc.player2 = player2;
-            if (player2) sc.speed *= -1;            
+            sc.SetPlayer(player2);       
         }
     }
 
     public void ReciveHit()
     {
         if (iframes) return;
+        BalasManager.instance.ClearScreen(!player2);
         marcador.PerderVida();
         StartCoroutine(Iframes());
     }

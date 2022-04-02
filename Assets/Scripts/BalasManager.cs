@@ -37,4 +37,19 @@ public class BalasManager : MonoBehaviour
         balas.Add(g);
         g.SetActive(false);
     }
+
+    public void ClearScreen()
+    {
+        foreach(ShootController sc in transform.GetComponentsInChildren<ShootController>())
+        {
+            if (sc.gameObject.activeSelf) DestroyBala(sc.gameObject);
+        }
+    }
+    public void ClearScreen(bool player)
+    {
+        foreach (ShootController sc in transform.GetComponentsInChildren<ShootController>())
+        {
+            if (sc.Player() == player && sc.gameObject.activeSelf) DestroyBala(sc.gameObject);
+        }
+    }
 }
