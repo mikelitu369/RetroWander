@@ -153,3 +153,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedBase: 20
+  blue: {fileID: 2100000, guid: 913311d13d50dcf49af7b2eb28708f4d, type: 2}
+  red: {fileID: 2100000, guid: afa1f295c36f4154dbd120fd7b0fbb61, type: 2}

@@ -7,16 +7,19 @@ public class ShootController : MonoBehaviour
     [SerializeField] float speedBase;
     float speed;
     bool player2;
+    [SerializeField] Material blue, red;
 
     public void SetPlayer(bool player)
     {
         player2 = player;
         if (!player2)
         {
+            GetComponentInChildren<SpriteRenderer>().material = blue;
             speed = speedBase;
         }
         else
         {
+            GetComponentInChildren<SpriteRenderer>().material = red;
             speed = -speedBase;
         }
     }
