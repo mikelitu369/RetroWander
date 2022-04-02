@@ -1347,6 +1347,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6794550042198834622, guid: 4588fd6db4950ab41b722af14bdc25f0,
         type: 3}
+    - target: {fileID: 3064958445434658457, guid: d9c7387fdadd4db47a1925fc4acb3e60,
+        type: 3}
+      propertyPath: tiposHabilidades.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3064958445434658458, guid: d9c7387fdadd4db47a1925fc4acb3e60,
         type: 3}
       propertyPath: m_RootOrder
@@ -1447,6 +1452,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6794550042198834622, guid: 4588fd6db4950ab41b722af14bdc25f0,
         type: 3}
+    - target: {fileID: 3064958445434658457, guid: d9c7387fdadd4db47a1925fc4acb3e60,
+        type: 3}
+      propertyPath: tiposHabilidades.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3064958445434658458, guid: d9c7387fdadd4db47a1925fc4acb3e60,
         type: 3}
       propertyPath: m_RootOrder
@@ -1633,7 +1643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188b5f030d980474f912861c87bbb646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: {fileID: 529585996}
+  puntos: {fileID: 0}
   vidas:
   - {fileID: 2074624510}
   - {fileID: 863590094}
@@ -2400,7 +2410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188b5f030d980474f912861c87bbb646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: {fileID: 1741487923}
+  puntos: {fileID: 0}
   vidas:
   - {fileID: 552599493}
   - {fileID: 615990073}

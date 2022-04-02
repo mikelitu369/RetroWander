@@ -31,6 +31,5 @@ public abstract class Habilidad
     public void ChargeMana()
     {
         mana += ManaCharge;
-        Debug.Log(mana);
     }
 }
