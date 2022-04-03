@@ -35,14 +35,43 @@ public class GodOfGame : MonoBehaviour
 
     private void Update()
     {
-        /*
         if(Input.GetKeyDown(nave1.Accion()) || Input.GetKeyDown(nave2.Accion()))
+        {
+            SwapPausa();         
+        }
+    }
+
+    public void SwapPausa()
+    {
+        if (!menuPausa.activeSelf)
         {
             menuPausa.SetActive(true);
             Time.timeScale = 0f;
+            menuPausa.GetComponent<MenuPausa>().Active();
         }
-        */
+        else
+        {
+            menuPausa.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
-
     
+    public bool InputAccion()
+    {
+        if (Input.GetKeyDown(nave1.b1)) return true;
+        if (Input.GetKeyDown(nave1.b2)) return true;
+        if (Input.GetKeyDown(nave1.b3)) return true;
+        if (Input.GetKeyDown(nave1.b4)) return true;
+        if (Input.GetKeyDown(nave1.b5)) return true;
+        if (Input.GetKeyDown(nave1.b6)) return true;
+
+        if (Input.GetKeyDown(nave2.b1)) return true;
+        if (Input.GetKeyDown(nave2.b2)) return true;
+        if (Input.GetKeyDown(nave2.b3)) return true;
+        if (Input.GetKeyDown(nave2.b4)) return true;
+        if (Input.GetKeyDown(nave2.b5)) return true;
+        if (Input.GetKeyDown(nave2.b6)) return true;
+
+        return false;
+    }
 }
