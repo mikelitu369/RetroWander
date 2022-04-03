@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 4742365323662348045}
   - component: {fileID: 6234362761885083330}
   - component: {fileID: 5604291861359670880}
+  - component: {fileID: 988106389655784948}
   m_Layer: 0
   m_Name: limite
   m_TagString: obstaculo
@@ -573,6 +574,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.465039, y: 1.278307}
   m_EdgeRadius: 0
+--- !u!114 &988106389655784948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742365323662348044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537540aa1b67fe0409e81904564ba1b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 3dad9a6be2ea285488f79be4bf513446, type: 3}
+  - {fileID: 21300000, guid: 9283610946fb42342b6991940d0fef0e, type: 3}
 --- !u!1 &4742365324269486927
 GameObject:
   m_ObjectHideFlags: 0
