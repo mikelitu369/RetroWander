@@ -26,6 +26,20 @@ public class RepulsorBalas : Habilidad
             }
         }
 
+
+        foreach (FatShootController sc in BalasManager.instance.transform.GetComponentsInChildren<FatShootController>())
+        {
+            if (sc.gameObject.activeSelf && sc.Player() != nave.Player2())
+            {
+                Vector3 direccion = sc.transform.position - nave.transform.position;
+                if (direccion.sqrMagnitude > 15 * 15) continue;
+                Auxiliar.RotacionAsistidaDirecta(sc.gameObject, direccion);
+                if (nave.Player2()) sc.transform.Rotate(Vector3.forward, 180f);
+                sc.SetPlayer(nave.Player2());
+            }
+        }
+
+
         return true;
     }
 }
