@@ -30,11 +30,13 @@ public class GodOfGame : MonoBehaviour
 
     private void Update()
     {
+        /*
         if(Input.GetKeyDown(nave1.Accion()) || Input.GetKeyDown(nave2.Accion()))
         {
             menuPausa.SetActive(true);
             Time.timeScale = 0f;
         }
+        */
     }
 
     
