@@ -14,6 +14,9 @@ public class RepulsorBalas : Habilidad
     {
         if(!base.Active())return false;
 
+        GameObject g = PullFX.instance.NewExplosionOndaExpansiva();
+        g.transform.position = nave.transform.position;
+
         foreach (ShootController sc in BalasManager.instance.transform.GetComponentsInChildren<ShootController>())
         {
             if (sc.gameObject.activeSelf && sc.Player() != nave.Player2())
