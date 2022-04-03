@@ -14,7 +14,7 @@ public class PacMan : MonoBehaviour
     [SerializeField] GameObject sprite;
 
     int cabreoConJugadorUno, cabreoConJugador2;
-    
+
 
 
     bool enfadado;
@@ -25,28 +25,61 @@ public class PacMan : MonoBehaviour
 
     Vector2 posObjetivo;
 
-
+    int direccion = 1;
     private void Start()
     {
         nave1 = GodOfGame.instance.nave1;
         nave2 = GodOfGame.instance.nave2;
         cabreoConJugadorUno = cabreoConJugador2 = 0;
         enfadado = false;
+        sprite.GetComponent<HijoPacman>().padre = this;
         NuevaPosicion();
     }
-
-    public void NuevaPosicion()
+    public void Cabrear(int i)
     {
-        Debug.Log("posPacman");
-        if(sprite.transform.position.y < 0)
+
+        if(i == 0)
         {
-            posObjetivo = new Vector2(0, 10);
-            sprite.transform.Rotate(Vector3.forward, 90);
+            if (cabreoConJugador2 > 4) 
+            {
+                Debug.Log("Supercabreo " + cabreoConJugador2);
+                return;
+            }
+
+            ++cabreoConJugador2;
+            if (cabreoConJugadorUno > 0) --cabreoConJugadorUno;
+            sprite.transform.Rotate(Vector3.forward,  -18 * direccion);
         }
         else
         {
-            posObjetivo = new Vector2(0, -10);
-            sprite.transform.Rotate(Vector3.forward, -90);
+            if (cabreoConJugadorUno > 4)
+            {
+                Debug.Log("Supercabreo " + cabreoConJugadorUno);
+                return;
+            }
+            ++cabreoConJugadorUno;
+            if (cabreoConJugador2 > 0) --cabreoConJugador2;
+            sprite.transform.Rotate(Vector3.forward, 18 * direccion);
+        }
+
+
+    }
+    public void NuevaPosicion()
+    {
+        sprite.transform.rotation = Quaternion.identity;
+        float anguloExtra = 18 * (cabreoConJugadorUno - cabreoConJugador2);
+        Debug.Log(anguloExtra);
+        if (sprite.transform.position.y < 0)
+        {
+            direccion = 1;
+            posObjetivo = new Vector2(0, 12);
+            sprite.transform.Rotate(Vector3.forward, 90 + anguloExtra);
+        }
+        else
+        {
+            direccion = -1;
+            posObjetivo = new Vector2(0, -12);
+            sprite.transform.Rotate(Vector3.forward, -90 - anguloExtra);
         }
     }
 
@@ -55,13 +88,13 @@ public class PacMan : MonoBehaviour
         if (Vector2.Distance(new Vector2(sprite.transform.position.x, sprite.transform.position.y), posObjetivo) < 1f)
         {
             timer += Time.deltaTime;
-            if(timer > cooldDown)
+            if (timer > cooldDown)
             {
                 timer = 0;
                 NuevaPosicion();
             }
         }
-        else 
+        else
         {
             Vector2 direccion = (posObjetivo - new Vector2(sprite.transform.position.x, sprite.transform.position.y)).normalized;
 
@@ -69,4 +102,5 @@ public class PacMan : MonoBehaviour
         }
     }
 
+  
 }

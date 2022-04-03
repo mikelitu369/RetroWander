@@ -10,6 +10,8 @@ public class GodOfGame : MonoBehaviour
 
     public NaveController nave1, nave2;
 
+    [SerializeField] GameObject menuPausa;
+
     private void Awake()
     {
         if (!instance) instance = this;
@@ -25,4 +27,17 @@ public class GodOfGame : MonoBehaviour
         if (nave1.Player2() == player) return nave1;
         else return nave2;
     }
+
+    private void Update()
+    {
+        /*
+        if(Input.GetKeyDown(nave1.Accion()) || Input.GetKeyDown(nave2.Accion()))
+        {
+            menuPausa.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        */
+    }
+
+    
 }
