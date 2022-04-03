@@ -13,7 +13,7 @@ public class RepulsorBalas : Habilidad
     public override bool Active()
     {
         if(!base.Active())return false;
-
+        Sonidero.instance.NewSound(Sonidero.audios.escudo);
         GameObject g = PullFX.instance.NewExplosionOndaExpansiva(nave.Player2());
         g.transform.position = nave.transform.position;
 

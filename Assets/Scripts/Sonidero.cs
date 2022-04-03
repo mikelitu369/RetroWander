@@ -11,7 +11,9 @@ public class Sonidero : MonoBehaviour
         disparoPerf = 1,
         escopeta = 2,
         racimo = 3,
-        perderVida = 4
+        perderVida = 4,
+        escudo = 5,
+        redireccion = 6
     }
 
     public static Sonidero instance;

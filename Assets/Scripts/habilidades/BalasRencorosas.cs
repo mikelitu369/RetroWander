@@ -13,7 +13,7 @@ public class BalasRencorosas : Habilidad
     public override bool Active()
     {
         if (!base.Active()) return false;
-
+        Sonidero.instance.NewSound(Sonidero.audios.redireccion);
         NaveController enemigo = GodOfGame.instance.GetNave(!nave.Player2());
 
         foreach (ShootController sc in BalasManager.instance.transform.GetComponentsInChildren<ShootController>())
