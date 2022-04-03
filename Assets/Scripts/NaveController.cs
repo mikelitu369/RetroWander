@@ -25,6 +25,9 @@ public class NaveController : MonoBehaviour
     [SerializeField] Habilidad.habilidades[] tiposHabilidades = new Habilidad.habilidades[6];
     Habilidad[] habilidades = new Habilidad[6];
 
+    [SerializeField] float fireRate;
+    float timerRate;
+
 
     private void Start()
     {
@@ -154,7 +157,9 @@ public class NaveController : MonoBehaviour
 
     void Disparo()
     {
-        if (Input.GetKeyDown(disparo))
+        timerRate += Time.deltaTime;
+        if(timerRate>=fireRate)
+        //if (Input.GetKeyDown(disparo))
         {
             ReproducirLaser(0);
             GameObject g = BalasManager.instance.NewBala();
@@ -165,6 +170,8 @@ public class NaveController : MonoBehaviour
             sc.SetPlayer(player2);
 
             foreach (Habilidad h in habilidades) if (h != null) h.ChargeMana();
+
+            timerRate = 0;
         }
     }
 
