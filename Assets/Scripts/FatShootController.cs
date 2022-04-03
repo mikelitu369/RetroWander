@@ -10,10 +10,10 @@ public class FatShootController : MonoBehaviour
     float verticalSpeed;
     protected bool player2;
 
-    public void SetPlayer(bool player, bool segundaVez = false)
+    public void SetPlayer(bool player)
     {
         player2 = player;
-        if(!segundaVez)transform.GetChild(0).transform.rotation = Quaternion.identity;
+        transform.GetChild(0).transform.localRotation = Quaternion.identity;
         if (!player2)
         {
             GetComponent<SwapMaterial>().Set(player2);
@@ -21,7 +21,7 @@ public class FatShootController : MonoBehaviour
         }
         else
         {
-            if(!segundaVez)transform.GetChild(0).transform.Rotate(Vector3.forward, 180);
+            transform.GetChild(0).transform.Rotate(Vector3.forward, 180);
             GetComponent<SwapMaterial>().Set(player2);
             speedBase = -speedBaseOriginal;
         }
