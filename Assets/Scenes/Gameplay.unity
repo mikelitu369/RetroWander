@@ -615,7 +615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -73, y: 16.999989}
+  m_AnchoredPosition: {x: -73, y: 16.999985}
   m_SizeDelta: {x: -82.49759, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &324370347
@@ -1078,7 +1078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 66, y: 16.999989}
+  m_AnchoredPosition: {x: 66, y: 16.999985}
   m_SizeDelta: {x: -89.670746, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548569722
@@ -2373,7 +2373,7 @@ PrefabInstance:
         type: 3}
       propertyPath: laserNormal
       value: 
-      objectReference: {fileID: 8300000, guid: 24567e5c04a5e234293962b3888309cf, type: 3}
+      objectReference: {fileID: 8300000, guid: e54ed3b10a6ad234596fcc99d79fac4e, type: 3}
     - target: {fileID: 3064958445434658457, guid: d9c7387fdadd4db47a1925fc4acb3e60,
         type: 3}
       propertyPath: laserracimo
@@ -2568,7 +2568,7 @@ PrefabInstance:
         type: 3}
       propertyPath: laserNormal
       value: 
-      objectReference: {fileID: 8300000, guid: 24567e5c04a5e234293962b3888309cf, type: 3}
+      objectReference: {fileID: 8300000, guid: e54ed3b10a6ad234596fcc99d79fac4e, type: 3}
     - target: {fileID: 3064958445434658457, guid: d9c7387fdadd4db47a1925fc4acb3e60,
         type: 3}
       propertyPath: laserracimo
@@ -3677,7 +3677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 119, y: 19.7}
+  m_AnchoredPosition: {x: 119, y: 19.699997}
   m_SizeDelta: {x: -286.62134, y: 0.00030517578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690650504
