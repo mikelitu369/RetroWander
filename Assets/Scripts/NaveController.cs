@@ -9,7 +9,7 @@ public class NaveController : MonoBehaviour
     [SerializeField] float velocidad;
 
     [SerializeField] bool player2;
-    public KeyCode arriba, abajo, derecha, izquierda, disparo, b1, b2, b3, b4, b5, b6;
+    [HideInInspector] public KeyCode arriba, abajo, derecha, izquierda, disparo, b1, b2, b3, b4, b5, b6;
 
     [SerializeField] float superior, inferior, derecho, izquierdo;
 

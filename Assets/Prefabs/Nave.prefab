@@ -185,13 +185,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 13
   player2: 0
+  arriba: 0
+  abajo: 0
+  derecha: 0
+  izquierda: 0
+  disparo: 0
+  b1: 0
+  b2: 0
+  b3: 0
+  b4: 0
+  b5: 0
+  b6: 0
   superior: 6.67
   inferior: -6.73
   derecho: -4.87
   izquierdo: -12.677
   marcador: {fileID: 0}
   iframesTime: 2
-  tiposHabilidades: 010000000300000004000000020000000600000005000000
+  tiposHabilidades: 030000000400000002000000010000000600000005000000
   fireRate: 0.6
 --- !u!50 &3064958445434658460
 Rigidbody2D:
