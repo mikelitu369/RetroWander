@@ -21,7 +21,7 @@ public class TiroEscopeta : Habilidad
 
         float angleDesfase = (maxAngle * 2) / numDisparos;
         float angle = maxAngle;
-
+      
         for (int i = 0; i < numDisparos; i++)
         {
             GameObject g = BalasManager.instance.NewBala();
@@ -32,6 +32,7 @@ public class TiroEscopeta : Habilidad
 
             angle -= angleDesfase;
         }
+        nave.ReproducirLaser(1);
         return true;
     }
 }

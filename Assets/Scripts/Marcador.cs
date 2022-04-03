@@ -6,9 +6,13 @@ using TMPro;
 public class Marcador : MonoBehaviour
 {
     [SerializeField] TextMeshPro puntos;
-    
+    AudioSource audioSC ;
     [SerializeField] GameObject[] vidas;
 
+    private void Start()
+    {
+        audioSC = this.GetComponent<AudioSource>();
+    }
     public void Set(int puntos)
     {
         this.puntos.text = puntos.ToString();
@@ -20,6 +24,7 @@ public class Marcador : MonoBehaviour
         {
             if (g.activeSelf)
             {
+                audioSC.Play();
                 g.SetActive(false);
                 break;
             }

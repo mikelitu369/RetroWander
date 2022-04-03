@@ -26,6 +26,7 @@ public class Metralleta : Habilidad
     {
         for (int i = 0; i < duration / cadence; i++)
         {
+            nave.ReproducirLaser(0);
             Disparar();
             yield return new WaitForSeconds(cadence);
         }
