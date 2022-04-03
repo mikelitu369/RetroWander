@@ -9,13 +9,11 @@ public static class Auxiliar
         Vector3 direccion = objetivo - rotado.transform.position;
 
         rotado.transform.rotation = Quaternion.identity;
-        Debug.Log(Mathf.Atan2(direccion.x, direccion.y));
         rotado.transform.Rotate(Vector3.forward, Mathf.Rad2Deg * Mathf.Atan2(direccion.y, direccion.x));
     }
     public static void RotacionAsistidaDirecta(GameObject rotado, Vector3 direccion)
     {
         rotado.transform.rotation = Quaternion.identity;
-        Debug.Log(Mathf.Atan2(direccion.x, direccion.y));
         rotado.transform.Rotate(Vector3.forward, Mathf.Rad2Deg * Mathf.Atan2(direccion.y, direccion.x));
     }
 }

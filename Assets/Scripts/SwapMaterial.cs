@@ -16,7 +16,7 @@ public class SwapMaterial : MonoBehaviour
         else
         {
             foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>()) sr.material = player2;
-            foreach (TrailRenderer tr in GetComponentsInChildren<TrailRenderer>()) tr.material = player1;
+            foreach (TrailRenderer tr in GetComponentsInChildren<TrailRenderer>()) tr.material = player2;
         }
     }
 }
