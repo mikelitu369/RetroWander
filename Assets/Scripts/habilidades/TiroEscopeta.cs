@@ -32,7 +32,7 @@ public class TiroEscopeta : Habilidad
 
             angle -= angleDesfase;
         }
-        nave.ReproducirLaser(1);
+        Sonidero.instance.NewSound(Sonidero.audios.escopeta);
         return true;
     }
 }

@@ -16,8 +16,8 @@ public class BalasRacimo : Habilidad
     public override bool Active()
     {
         if (!base.Active()) return false;
-        nave.ReproducirLaser(3);
-        foreach(ShootController sc in BalasManager.instance.transform.GetComponentsInChildren<ShootController>())
+        Sonidero.instance.NewSound(Sonidero.audios.racimo);
+        foreach (ShootController sc in BalasManager.instance.transform.GetComponentsInChildren<ShootController>())
         {
             if(sc.gameObject.activeSelf && sc.Player() == nave.Player2())
             {

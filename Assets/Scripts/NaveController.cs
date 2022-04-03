@@ -14,14 +14,9 @@ public class NaveController : MonoBehaviour
     [SerializeField] float superior, inferior, derecho, izquierdo;
 
     [SerializeField] Marcador marcador;
-    [SerializeField] AudioClip laserNormal;
-    [SerializeField] AudioClip sonidoescopeta;
-    [SerializeField] AudioClip laserGordo;
-    [SerializeField] AudioClip laserracimo;
-
+    
     [SerializeField] float iframesTime;
     bool iframes;
-    AudioSource audioSC;
     [SerializeField] Habilidad.habilidades[] tiposHabilidades = new Habilidad.habilidades[6];
     Habilidad[] habilidades = new Habilidad[6];
 
@@ -31,7 +26,6 @@ public class NaveController : MonoBehaviour
 
     private void Start()
     {
-        audioSC = this.GetComponent<AudioSource>();
         if (arcade)
         {
             if (player2)
@@ -161,7 +155,7 @@ public class NaveController : MonoBehaviour
         if(timerRate>=fireRate)
         //if (Input.GetKeyDown(disparo))
         {
-            ReproducirLaser(0);
+            Sonidero.instance.NewSound(Sonidero.audios.disparo);
             GameObject g = BalasManager.instance.NewBala();
             ShootController sc = g.GetComponent<ShootController>();
 
@@ -211,30 +205,6 @@ public class NaveController : MonoBehaviour
     public float GetCharge(int index)
     {
         return habilidades[index].Charge();
-    }
-
-    public void ReproducirLaser(int TipoSonido)
-    {
-        //laserNormal
-        if(TipoSonido == 0)
-        {
-            
-            audioSC.clip = laserNormal;
-        }
-        else if(TipoSonido == 1)
-        {
-            audioSC.clip =sonidoescopeta;
-        }
-        else if (TipoSonido == 2)
-        {
-            audioSC.clip = laserGordo;
-        }
-        else if (TipoSonido == 3)
-        {
-            audioSC.clip = laserracimo;
-        }
-
-        audioSC.Play();
-    }
+    }   
 
 }

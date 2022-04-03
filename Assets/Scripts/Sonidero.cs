@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class Sonidero : MonoBehaviour
 {
-    public static Sonidero instance;
+    [SerializeField] List<AudioClip> clipsAudios;
+    public enum audios
+    {
+        disparo = 0,
+        disparoPerf = 1,
+        escopeta = 2,
+        racimo = 3,
+        perderVida = 4
+    }
 
+    public static Sonidero instance;
     private void Awake()
     {
         if (!instance) instance = this;
@@ -33,9 +42,19 @@ public class Sonidero : MonoBehaviour
         }
     }
 
+    public void NewSound(audios audio)
+    {
+        NewSound(Audio(audio));
+    }
+
     public void StopSound(GameObject audio)
     {
         sonidos.Add(audio.GetComponent<AudioSource>());
         audio.SetActive(false);
+    }
+
+    public AudioClip Audio(audios id)
+    {
+        return clipsAudios[(int)id];
     }
 }

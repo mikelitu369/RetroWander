@@ -13,7 +13,7 @@ public class DisparoPerforante : Habilidad
     public override bool Active()
     {
         if(!base.Active())return false;
-        nave.ReproducirLaser(2);
+        Sonidero.instance.NewSound(Sonidero.audios.disparoPerf);
         GameObject g = BalasManager.instance.NewBalaPerf();
         g.transform.position = nave.transform.position;
 

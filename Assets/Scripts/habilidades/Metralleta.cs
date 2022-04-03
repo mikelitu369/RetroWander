@@ -26,7 +26,6 @@ public class Metralleta : Habilidad
     {
         for (int i = 0; i < duration / cadence; i++)
         {
-            nave.ReproducirLaser(0);
             Disparar();
             yield return new WaitForSeconds(cadence);
         }
@@ -34,6 +33,7 @@ public class Metralleta : Habilidad
 
     void Disparar()
     {
+        Sonidero.instance.NewSound(Sonidero.audios.disparo);
         GameObject g = BalasManager.instance.NewBala();
         g.transform.position = nave.transform.position;
         g.transform.rotation = Quaternion.identity;
