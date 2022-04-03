@@ -476,7 +476,7 @@ RectTransform:
   m_LocalScale: {x: 1.9442, y: 1.9442, z: 1.9442}
   m_Children: []
   m_Father: {fileID: 1771062360}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: d4d93c30ccd2a944883366d33fe3ad23, type: 2}
+  m_Material: {fileID: 2100000, guid: 7ebd4ade0995e0e46bca28ababfb9aaf, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
@@ -850,7 +850,7 @@ RectTransform:
   m_LocalScale: {x: 1.9442, y: 1.9442, z: 1.9442}
   m_Children: []
   m_Father: {fileID: 1771062360}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -869,7 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: d4d93c30ccd2a944883366d33fe3ad23, type: 2}
+  m_Material: {fileID: 2100000, guid: d42ad3cc9754c1444983c1466599d9fb, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
@@ -1175,7 +1175,7 @@ RectTransform:
   m_LocalScale: {x: 1.9442, y: 1.9442, z: 1.9442}
   m_Children: []
   m_Father: {fileID: 1771062360}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: d4d93c30ccd2a944883366d33fe3ad23, type: 2}
+  m_Material: {fileID: 2100000, guid: b78298145b4f55f47bfcc431b40da12b, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
@@ -1554,7 +1554,7 @@ RectTransform:
   m_LocalScale: {x: 1.9442, y: 1.9442, z: 1.9442}
   m_Children: []
   m_Father: {fileID: 1771062360}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4659,12 +4659,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 530717863}
+  - {fileID: 1813680887}
+  - {fileID: 744857590}
   - {fileID: 382615731}
   - {fileID: 2030461925}
   - {fileID: 127333135}
-  - {fileID: 744857590}
-  - {fileID: 1813680887}
-  - {fileID: 530717863}
   m_Father: {fileID: 1832628741}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4945,7 +4945,7 @@ RectTransform:
   m_LocalScale: {x: 1.9442, y: 1.9442, z: 1.9442}
   m_Children: []
   m_Father: {fileID: 1771062360}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4964,7 +4964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: d4d93c30ccd2a944883366d33fe3ad23, type: 2}
+  m_Material: {fileID: 2100000, guid: 9ca54a9c40e2e5e4e988fa6d01618aee, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
@@ -5985,7 +5985,7 @@ RectTransform:
   m_LocalScale: {x: 1.9442, y: 1.9442, z: 1.9442}
   m_Children: []
   m_Father: {fileID: 1771062360}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6004,14 +6004,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: d4d93c30ccd2a944883366d33fe3ad23, type: 2}
+  m_Material: {fileID: 2100000, guid: b8f1a5dcb4843f045b2c03f0cc9e0489, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0031046a3ce2a4647a9ed966b90d2072, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c04e845367260fa479607a31577ca32b, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
