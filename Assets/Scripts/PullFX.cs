@@ -54,6 +54,9 @@ public class PullFX : MonoBehaviour
             case FXs.explosionDisparoPerf:
                 DestroyExplosionDisparoPerf(fx);
                 break;
+            case FXs.expansion:
+                DestroyOndaExpansiva(fx);
+                break;
         }
     }
 
@@ -86,6 +89,32 @@ public class PullFX : MonoBehaviour
     private void DestroyExplosionDisparoPerf(GameObject explosion)
     {
         explosionesDisparosPerf.Add(explosion);
+        explosion.SetActive(false);
+    }
+
+    public GameObject NewExplosionOndaExpansiva(bool player2 = false)
+    {
+
+        GameObject explosion = null;
+        if (ondasExpansivas.Count > 0)
+        {
+            explosion = ondasExpansivas[0];
+            explosion.SetActive(true);
+            ondasExpansivas.Remove(explosion);
+        }
+        else
+        {
+            explosion = Instantiate(ondaExpansiva, transform);
+        }
+
+        explosion.GetComponent<SwapMaterial>().Set(player2);
+
+        return explosion;
+    }
+
+    private void DestroyOndaExpansiva(GameObject explosion)
+    {
+        ondasExpansivas.Add(explosion);
         explosion.SetActive(false);
     }
 }
