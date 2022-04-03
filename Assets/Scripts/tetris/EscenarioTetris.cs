@@ -45,9 +45,11 @@ public class EscenarioTetris : MonoBehaviour
         timer = 0;
         huecoRestantes = 4;
         //InvokeRepeating("LanzarRaycast", 0,1f);
+        SpawnPieza();
     }
     private void Update()
     {
+       
         timer += Time.deltaTime;
 
 

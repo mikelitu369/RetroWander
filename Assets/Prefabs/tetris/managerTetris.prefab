@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d92959d91a289b45b8e263cd96d152f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateSpawn: 4
+  rateSpawn: 3
   posSpwan:
   - {fileID: 5319345091466783300}
   - {fileID: 5319345090593420802}
