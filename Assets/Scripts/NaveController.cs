@@ -69,7 +69,7 @@ public class NaveController : MonoBehaviour
                 abajo = KeyCode.S;
                 derecha = KeyCode.D;
                 izquierda = KeyCode.A;
-                disparo = KeyCode.Space;
+                disparo = KeyCode.Escape;
                 b1 = KeyCode.U;
                 b2 = KeyCode.I;
                 b3 = KeyCode.O;
@@ -87,7 +87,7 @@ public class NaveController : MonoBehaviour
                 abajo = KeyCode.DownArrow;
                 derecha = KeyCode.RightArrow;
                 izquierda = KeyCode.LeftArrow;
-                disparo = KeyCode.Keypad0;
+                disparo = KeyCode.Return;
                 b1 = KeyCode.Keypad4;
                 b2 = KeyCode.Keypad5;
                 b3 = KeyCode.Keypad6;
@@ -207,4 +207,8 @@ public class NaveController : MonoBehaviour
         return habilidades[index].Charge();
     }   
 
+    public KeyCode Accion()
+    {
+        return disparo;
+    }
 }
