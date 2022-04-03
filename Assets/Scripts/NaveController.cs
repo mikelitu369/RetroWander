@@ -70,12 +70,12 @@ public class NaveController : MonoBehaviour
                 derecha = KeyCode.D;
                 izquierda = KeyCode.A;
                 disparo = KeyCode.Space;
-                b1 = KeyCode.F;
-                b2 = KeyCode.G;
-                b3 = KeyCode.H;
-                b4 = KeyCode.V;
-                b5 = KeyCode.B;
-                b6 = KeyCode.N;
+                b1 = KeyCode.U;
+                b2 = KeyCode.I;
+                b3 = KeyCode.O;
+                b4 = KeyCode.J;
+                b5 = KeyCode.K;
+                b6 = KeyCode.L;
             }
             else
             {
