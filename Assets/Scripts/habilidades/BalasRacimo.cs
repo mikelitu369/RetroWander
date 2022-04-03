@@ -45,7 +45,7 @@ public class BalasRacimo : Habilidad
                     GameObject g = BalasManager.instance.NewBalaPerf();
                     g.transform.position = position;
                     g.transform.Rotate(Vector3.forward, angulo);
-                    g.GetComponent<FatShootController>().SetPlayer(nave.Player2(), true);
+                    g.GetComponent<FatShootController>().SetPlayer(nave.Player2());
                 }
             }
         }
