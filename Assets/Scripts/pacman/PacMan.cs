@@ -10,7 +10,7 @@ public class PacMan : MonoBehaviour
     [SerializeField] float cooldDown;
     [SerializeField] float steering;
     [SerializeField] float velocidad;
-    [SerializeField] int limiteCabreo;
+    [SerializeField] float limiteCabreo;
     [SerializeField] GameObject sprite;
 
     int cabreoConJugadorUno, cabreoConJugador2;
@@ -20,8 +20,10 @@ public class PacMan : MonoBehaviour
     bool enfadado;
 
     float timer;
+    float timerCabreo;
 
-    NaveController nave1, nave2;
+    NaveController nave1, nave2, naveENfado;
+
 
     Vector2 posObjetivo;
 
@@ -31,6 +33,8 @@ public class PacMan : MonoBehaviour
         nave1 = GodOfGame.instance.nave1;
         nave2 = GodOfGame.instance.nave2;
         cabreoConJugadorUno = cabreoConJugador2 = 0;
+        timer = 0;
+        timerCabreo = 0;
         enfadado = false;
         sprite.GetComponent<HijoPacman>().padre = this;
         NuevaPosicion();
@@ -38,22 +42,26 @@ public class PacMan : MonoBehaviour
     public void Cabrear(int i)
     {
 
-        if(i == 0)
+        if (i == 0)
         {
-            if (cabreoConJugador2 > 4) 
+            if (cabreoConJugador2 > 4)
             {
+                enfadado = true;
+                naveENfado = nave2;
                 Debug.Log("Supercabreo " + cabreoConJugador2);
                 return;
             }
 
             ++cabreoConJugador2;
             if (cabreoConJugadorUno > 0) --cabreoConJugadorUno;
-            sprite.transform.Rotate(Vector3.forward,  -18 * direccion);
+            sprite.transform.Rotate(Vector3.forward, -18 * direccion);
         }
         else
         {
             if (cabreoConJugadorUno > 4)
             {
+                enfadado = true;
+                naveENfado = nave1;
                 Debug.Log("Supercabreo " + cabreoConJugadorUno);
                 return;
             }
@@ -85,22 +93,63 @@ public class PacMan : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(new Vector2(sprite.transform.position.x, sprite.transform.position.y), posObjetivo) < 1f)
+        if (!enfadado)
         {
-            timer += Time.deltaTime;
-            if (timer > cooldDown)
+
+
+            if (Vector2.Distance(new Vector2(sprite.transform.position.x, sprite.transform.position.y), posObjetivo) < 1f)
             {
-                timer = 0;
-                NuevaPosicion();
+                timer += Time.deltaTime;
+                if (timer > cooldDown)
+                {
+                    timer = 0;
+                    NuevaPosicion();
+                }
+            }
+            else
+            {
+                Vector2 direccion = (posObjetivo - new Vector2(sprite.transform.position.x, sprite.transform.position.y)).normalized;
+
+                sprite.transform.position += new Vector3(direccion.x, direccion.y, 0) * velocidad * Time.deltaTime;
             }
         }
         else
         {
-            Vector2 direccion = (posObjetivo - new Vector2(sprite.transform.position.x, sprite.transform.position.y)).normalized;
+            timerCabreo += Time.deltaTime;
+            if(timerCabreo > limiteCabreo)
+            {
+                Debug.Log("reposiciono");
+                enfadado = false;
+                timerCabreo = 0;
+                direccion = 1;
+                cabreoConJugador2 = 0;
+                cabreoConJugadorUno = 0;
+                timer = 0;
+                sprite.GetComponent<Rigidbody2D>().angularVelocity = 0;
+                sprite.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                sprite.transform.position = new Vector3(0, -12, 0);
+                sprite.transform.rotation = Quaternion.identity;
+                NuevaPosicion();
+            }
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (enfadado)
+        {
+            timerCabreo += Time.deltaTime;
+            Debug.Log("hola");
+            Vector2 direccion = (Vector2)naveENfado.gameObject.transform.position - (Vector2)sprite.transform.position;
 
-            sprite.transform.position += new Vector3(direccion.x, direccion.y, 0) * velocidad * Time.deltaTime;
+            direccion.Normalize();
+
+            float rotateAmount = Vector3.Cross(direccion, sprite.transform.right).z;
+
+
+            sprite.GetComponent<Rigidbody2D>().angularVelocity = -rotateAmount * steering;
+            sprite.GetComponent<Rigidbody2D>().velocity = sprite.transform.right * velocidad * 4;
         }
     }
 
-  
+
 }

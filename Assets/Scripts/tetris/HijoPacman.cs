@@ -36,5 +36,15 @@ public class HijoPacman : MonoBehaviour
                 }
             }
         }
+       else if (collision.CompareTag("nave"))
+        {
+            NaveController nave = collision.GetComponent<NaveController>();
+         
+            
+
+                nave.ReciveHit();
+
+            
+        }
     }
 }

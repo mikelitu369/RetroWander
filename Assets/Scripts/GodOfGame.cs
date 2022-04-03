@@ -11,11 +11,16 @@ public class GodOfGame : MonoBehaviour
     public NaveController nave1, nave2;
 
     [SerializeField] GameObject menuPausa;
+    [SerializeField] GameObject[] juegos;
 
     private void Awake()
     {
         if (!instance) instance = this;
         else Destroy(this.gameObject);
+    }
+    private void Start()
+    {
+        Instantiate(juegos[Random.Range(0, juegos.Length)], this.transform);
     }
     public void RecargarPartida()
     {
