@@ -848,7 +848,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LIFES
+  m_text: LIVES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 962e51f44ba73da4fbd5fa63052bcc42, type: 2}
   m_sharedMaterial: {fileID: -2334594957995881950, guid: 962e51f44ba73da4fbd5fa63052bcc42,
@@ -1876,7 +1876,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LIFES
+  m_text: LIVES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 962e51f44ba73da4fbd5fa63052bcc42, type: 2}
   m_sharedMaterial: {fileID: -2334594957995881950, guid: 962e51f44ba73da4fbd5fa63052bcc42,
