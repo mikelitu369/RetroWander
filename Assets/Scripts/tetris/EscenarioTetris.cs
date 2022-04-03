@@ -28,6 +28,9 @@ public class EscenarioTetris : MonoBehaviour
 
    public  List<GameObject> poolPiezas;
 
+    List <int> posicionesASpawnear;
+    List<int> cola;
+
     public List<GameObject> piezasIndividuales;
     NaveController nave1, nave2;
 
@@ -35,7 +38,8 @@ public class EscenarioTetris : MonoBehaviour
     {
         nave1 = GodOfGame.instance.nave1;
         nave2 = GodOfGame.instance.nave2;
-
+        posicionesASpawnear = new List<int>();
+        cola = new List<int>();
         piezasIndividuales = new List<GameObject>();
         poolPiezas = new List<GameObject>();
         timer = 0;
@@ -59,12 +63,32 @@ public class EscenarioTetris : MonoBehaviour
     public void SpawnPieza()
     {
         GameObject p;
-        int randomizador = 0;
-        do
+        
+
+        if(cola.Count == 0)
+        {
+            posicionesASpawnear.Clear();
+            posicionesASpawnear.Add(0);
+            posicionesASpawnear.Add(1);
+            posicionesASpawnear.Add(2);
+            posicionesASpawnear.Add(3);
+
+            for (int i = 0; i < 4; ++i)
+            {
+                 int randomizador = Random.Range(0, posicionesASpawnear.Count);
+
+                cola.Add(posicionesASpawnear[randomizador]);
+
+                posicionesASpawnear.RemoveAt(randomizador);
+            }
+
+
+        }
+       /* do
         {
             randomizador = Random.Range(0, 4);
         } while (randomizador == ultimapos);
-        ultimapos = randomizador;
+        ultimapos = randomizador;*/
         bool encontrada = false;
         if (poolPiezas.Count > 0)
         {
@@ -74,12 +98,13 @@ public class EscenarioTetris : MonoBehaviour
                 PadreTetris tP = poolPiezas[i].GetComponent<PadreTetris>();
                 for(int j = 0; j < tP.canales.Count && !encontrada; ++j)
                 {
-                    if(randomizador == tP.canales[j])
+                    if(cola[0] == tP.canales[j])
                     {
-                        poolPiezas[i].transform.position = posSpwan[randomizador].position;
+                        poolPiezas[i].transform.position = posSpwan[cola[0]].position;
                         tP.ResetPieza();
                         poolPiezas.RemoveAt(i);
                         encontrada = true;
+                        cola.RemoveAt(0);
                     }
                 }
             }
@@ -95,12 +120,13 @@ public class EscenarioTetris : MonoBehaviour
                  numero = Random.Range(0, piezasASpawnear.Count);
                 for (int i = 0; i < piezasASpawnear[numero].GetComponent<PadreTetris>().canales.Count; ++i)
                 {
-                    if (randomizador == piezasASpawnear[numero].GetComponent<PadreTetris>().canales[i]) noEntra = true;
+                    if (cola[0] == piezasASpawnear[numero].GetComponent<PadreTetris>().canales[i]) noEntra = true;
                 }
             } while (!noEntra);
 
-            GameObject padre =  Instantiate(piezasASpawnear[numero], posSpwan[randomizador].position, Quaternion.identity);
+            GameObject padre =  Instantiate(piezasASpawnear[numero], posSpwan[cola[0]].position, Quaternion.identity);
             padre.GetComponent<PadreTetris>().escenario = this;
+            cola.RemoveAt(0);
 
         }
     }
