@@ -32,18 +32,40 @@ public class PacMan : MonoBehaviour
         nave2 = GodOfGame.instance.nave2;
         cabreoConJugadorUno = cabreoConJugador2 = 0;
         enfadado = false;
+        NuevaPosicion();
     }
 
     public void NuevaPosicion()
     {
-        if(this.transform.position.y < 0)
+        Debug.Log("posPacman");
+        if(sprite.transform.position.y < 0)
         {
             posObjetivo = new Vector2(0, 10);
-           
+            sprite.transform.Rotate(Vector3.forward, 90);
         }
         else
         {
             posObjetivo = new Vector2(0, -10);
+            sprite.transform.Rotate(Vector3.forward, -90);
+        }
+    }
+
+    private void Update()
+    {
+        if (Vector2.Distance(new Vector2(sprite.transform.position.x, sprite.transform.position.y), posObjetivo) < 1f)
+        {
+            timer += Time.deltaTime;
+            if(timer > cooldDown)
+            {
+                timer = 0;
+                NuevaPosicion();
+            }
+        }
+        else 
+        {
+            Vector2 direccion = (posObjetivo - new Vector2(sprite.transform.position.x, sprite.transform.position.y)).normalized;
+
+            sprite.transform.position += new Vector3(direccion.x, direccion.y, 0) * velocidad * Time.deltaTime;
         }
     }
 
