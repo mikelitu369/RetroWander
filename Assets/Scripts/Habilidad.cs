@@ -16,7 +16,7 @@ public abstract class Habilidad
     }
 
 
-    static float ManaCharge = 1;
+    static float ManaCharge = 2;
     protected float coste;
     float mana;
     protected NaveController nave;

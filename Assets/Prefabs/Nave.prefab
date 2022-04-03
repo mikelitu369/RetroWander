@@ -190,13 +190,9 @@ MonoBehaviour:
   derecho: -4.87
   izquierdo: -12.677
   marcador: {fileID: 0}
-  laserNormal: {fileID: 8300000, guid: e54ed3b10a6ad234596fcc99d79fac4e, type: 3}
-  sonidoescopeta: {fileID: 8300000, guid: 985e6499632076f428f464b0917ab5d4, type: 3}
-  laserGordo: {fileID: 8300000, guid: 16efe7d085a3c6a429177fb25c6307d1, type: 3}
-  laserracimo: {fileID: 8300000, guid: 0434ea1135f32774990bacc566a62c3e, type: 3}
   iframesTime: 2
   tiposHabilidades: 010000000200000003000000060000000500000004000000
-  fireRate: 0.3
+  fireRate: 0.6
 --- !u!50 &3064958445434658460
 Rigidbody2D:
   serializedVersion: 4
