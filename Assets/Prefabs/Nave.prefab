@@ -203,7 +203,7 @@ MonoBehaviour:
   marcador: {fileID: 0}
   iframesTime: 2
   tiposHabilidades: 030000000400000002000000010000000600000005000000
-  fireRate: 0.6
+  fireRate: 0.5
 --- !u!50 &3064958445434658460
 Rigidbody2D:
   serializedVersion: 4

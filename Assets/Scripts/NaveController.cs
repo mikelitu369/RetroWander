@@ -185,7 +185,7 @@ public class NaveController : MonoBehaviour
 
     public void ReciveHit()
     {
-        if (iframes) return;
+        if (iframes || GodOfGame.instance.fin) return;
         marcador.PerderVida(player2);
         StartCoroutine(Iframes());
     }
@@ -208,7 +208,7 @@ public class NaveController : MonoBehaviour
     public float GetCharge(int index)
     {
         return habilidades[index].Charge();
-    }   
+    }
 
     public KeyCode Accion()
     {

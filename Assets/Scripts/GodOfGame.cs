@@ -8,6 +8,8 @@ public class GodOfGame : MonoBehaviour
 
     public static GodOfGame instance;
 
+    public bool fin;
+
     public NaveController nave1, nave2;
     [SerializeField] GameObject TextoPlayer1Win;
     [SerializeField] GameObject TextoPlayer2Win;
@@ -21,20 +23,33 @@ public class GodOfGame : MonoBehaviour
     }
     private void Start()
     {
+        fin = false;
         Instantiate(juegos[Random.Range(0, juegos.Length)], this.transform);
     }
     public void RecargarPartida(bool player)
     {
-        if(player)TextoPlayer1Win.GetComponent<Animator>().SetInteger("Estado", -1);
-        else TextoPlayer2Win.GetComponent<Animator>().SetInteger("Estado", -1);
-        StartCoroutine(AcabarRonda());
+
+        Time.timeScale = 0.5f;
+        if (!Score.Fin())
+        {
+            if(player)TextoPlayer1Win.GetComponent<Animator>().SetInteger("Estado", -1);
+            else TextoPlayer2Win.GetComponent<Animator>().SetInteger("Estado", -1);
+            StartCoroutine(AcabarRonda(SceneManager.GetActiveScene().name));
+        }
+        else
+        {
+            if (player) TextoPlayer1Win.GetComponent<Animator>().SetInteger("Estado", -1);
+            else TextoPlayer2Win.GetComponent<Animator>().SetInteger("Estado", -1);
+            StartCoroutine(AcabarRonda("Menu"));
+        }
     }
 
 
-    IEnumerator AcabarRonda()
+    IEnumerator AcabarRonda(string s)
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(s);
     }
 
 public NaveController GetNave(bool player)

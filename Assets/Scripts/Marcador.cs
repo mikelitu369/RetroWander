@@ -31,8 +31,9 @@ public class Marcador : MonoBehaviour
 
     void End(bool player)
     {
-        if (player) Score.player2++;
-        else Score.player1++;
+        GodOfGame.instance.fin = true;
+        if (player) Score.player1++;
+        else Score.player2++;
         GodOfGame.instance.RecargarPartida(player);
     }
     public float ReturnVidas()
