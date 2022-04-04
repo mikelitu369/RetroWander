@@ -3635,6 +3635,11 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.key1.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3064958445434658457, guid: d9c7387fdadd4db47a1925fc4acb3e60,
+        type: 3}
+      propertyPath: player2
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3064958445434658458, guid: d9c7387fdadd4db47a1925fc4acb3e60,
         type: 3}
       propertyPath: m_RootOrder
