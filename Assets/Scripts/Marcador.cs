@@ -40,7 +40,7 @@ public class Marcador : MonoBehaviour
     {
         if (ended) return;
         ended = true;
-        Set(puntos2 + 1);
+        GodOfGame.instance.GetNave(!player).marcador.Refresh();
         GodOfGame.instance.fin = true;
         if (player) Score.player1++;
         else Score.player2++;
@@ -50,5 +50,10 @@ public class Marcador : MonoBehaviour
     {
         print(vidas);
         return vidas.Length;
+    }
+
+    public void Refresh()
+    {
+        Set(puntos2 + 1);
     }
 }

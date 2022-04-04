@@ -13,7 +13,7 @@ public class NaveController : MonoBehaviour
 
     [SerializeField] float superior, inferior, derecho, izquierdo;
 
-    [SerializeField] Marcador marcador;
+    public Marcador marcador;
     
     [SerializeField] float iframesTime;
     bool iframes;
