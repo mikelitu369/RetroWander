@@ -139,7 +139,7 @@ public class EscenarioTetris : MonoBehaviour
             if(lineasJugador1 > 9)
             {
                 Debug.Log("GANA EL JUGADOR 1");
-                GodOfGame.instance.RecargarPartida();
+                GodOfGame.instance.RecargarPartida(false);
                 return;
             }
             GameObject g = Instantiate(limite, new Vector3(7.99f, 8 - (0.66f +lineasJugador1 * 1.33f), 0), Quaternion.identity);
@@ -151,7 +151,7 @@ public class EscenarioTetris : MonoBehaviour
         {
             if (lineasJugador2 > 9)
             {
-                GodOfGame.instance.RecargarPartida();
+                GodOfGame.instance.RecargarPartida(true);
                 Debug.Log("GANA EL JUGADOR 2");
                 return;
             }

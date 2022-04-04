@@ -183,7 +183,7 @@ public class NaveController : MonoBehaviour
     public void ReciveHit()
     {
         if (iframes) return;
-        marcador.PerderVida();
+        marcador.PerderVida(player2);
         StartCoroutine(Iframes());
     }
 

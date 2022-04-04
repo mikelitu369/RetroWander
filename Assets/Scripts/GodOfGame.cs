@@ -9,7 +9,8 @@ public class GodOfGame : MonoBehaviour
     public static GodOfGame instance;
 
     public NaveController nave1, nave2;
-
+    [SerializeField] GameObject TextoPlayer1Win;
+    [SerializeField] GameObject TextoPlayer2Win;
     [SerializeField] GameObject menuPausa;
     [SerializeField] GameObject[] juegos;
 
@@ -22,12 +23,21 @@ public class GodOfGame : MonoBehaviour
     {
         Instantiate(juegos[Random.Range(0, juegos.Length)], this.transform);
     }
-    public void RecargarPartida()
+    public void RecargarPartida(bool player)
     {
+        if(player)TextoPlayer1Win.GetComponent<Animator>().SetInteger("Estado", -1);
+        else TextoPlayer2Win.GetComponent<Animator>().SetInteger("Estado", -1);
+        StartCoroutine(AcabarRonda());
+    }
+
+
+    IEnumerator AcabarRonda()
+    {
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public NaveController GetNave(bool player)
+public NaveController GetNave(bool player)
     {
         if (nave1.Player2() == player) return nave1;
         else return nave2;

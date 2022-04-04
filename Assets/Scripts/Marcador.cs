@@ -14,7 +14,7 @@ public class Marcador : MonoBehaviour
         this.puntos.text = puntos.ToString();
     }
 
-    public void PerderVida()
+    public void PerderVida(bool player)
     {
         foreach(GameObject g in vidas)
         {
@@ -26,12 +26,17 @@ public class Marcador : MonoBehaviour
             }
         }
 
-        if (!vidas[vidas.Length - 1].activeSelf) End();
+        if (!vidas[vidas.Length - 1].activeSelf) End(player);
     }    
 
-    void End()
+    void End(bool player)
     {
         print("End");
-        GodOfGame.instance.RecargarPartida();
+        GodOfGame.instance.RecargarPartida(player);
+    }
+    public float ReturnVidas()
+    {
+        print(vidas);
+        return vidas.Length;
     }
 }
