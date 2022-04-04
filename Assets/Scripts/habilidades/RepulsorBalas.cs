@@ -7,7 +7,7 @@ public class RepulsorBalas : Habilidad
     public RepulsorBalas(NaveController nc)
     {
         nave = nc;
-        coste = 20;
+        coste = 10;
     }
 
     public override bool Active()

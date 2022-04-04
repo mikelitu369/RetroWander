@@ -26,6 +26,9 @@ public class NaveController : MonoBehaviour
 
     private void Start()
     {
+        if (player2) marcador.Set(Score.player2);
+        else marcador.Set(Score.player1);
+
         if (arcade)
         {
             if (player2)

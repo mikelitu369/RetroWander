@@ -10,7 +10,7 @@ public class Metralleta : Habilidad
         nave = nc;
         duration = 4;
         cadence = 0.1f;
-        coste = 20;
+        coste = 30;
     }
 
     public override bool Active()
