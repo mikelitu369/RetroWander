@@ -12,6 +12,7 @@ public class PacMan : MonoBehaviour
     [SerializeField] float velocidad;
     [SerializeField] float limiteCabreo;
     [SerializeField] GameObject sprite;
+    [SerializeField] GameObject Trail;
 
     int cabreoConJugadorUno, cabreoConJugador2;
 
@@ -30,6 +31,7 @@ public class PacMan : MonoBehaviour
     int direccion = 1;
     private void Start()
     {
+        
         nave1 = GodOfGame.instance.nave1;
         nave2 = GodOfGame.instance.nave2;
         cabreoConJugadorUno = cabreoConJugador2 = 0;
@@ -46,6 +48,7 @@ public class PacMan : MonoBehaviour
         {
             if (cabreoConJugador2 > 4)
             {
+                Trail.SetActive(true);
                 enfadado = true;
                 naveENfado = nave2;
                 Debug.Log("Supercabreo " + cabreoConJugador2);
@@ -60,6 +63,7 @@ public class PacMan : MonoBehaviour
         {
             if (cabreoConJugadorUno > 4)
             {
+                Trail.SetActive(true);
                 enfadado = true;
                 naveENfado = nave1;
                 Debug.Log("Supercabreo " + cabreoConJugadorUno);
@@ -120,6 +124,7 @@ public class PacMan : MonoBehaviour
             {
                 Debug.Log("reposiciono");
                 enfadado = false;
+                Trail.SetActive(false);
                 timerCabreo = 0;
                 direccion = 1;
                 cabreoConJugador2 = 0;
