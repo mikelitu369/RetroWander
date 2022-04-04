@@ -84,9 +84,9 @@ public class PiezaIndividualTetris : MonoBehaviour
     }
     public void CambiarColor(int i)
     {
-        print(i);
+       
         jugador = i;
-        Debug.Log(padre.gameObject.name);
+       
         this.GetComponent<SwapMaterial>().Set(i == 1);
        // this.GetComponent<SpriteRenderer>().sprite = sprites[i];
     }
