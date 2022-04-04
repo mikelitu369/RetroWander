@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 544293383424641814}
   - component: {fileID: -2876644183259585070}
   - component: {fileID: -2330124457949026819}
+  - component: {fileID: 1765090249361761472}
   m_Layer: 0
   m_Name: piezaTetrisHIja
   m_TagString: obstaculo
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bda3e9dbbc4bf23439b489c8ffaeab84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,3 +153,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &1765090249361761472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279460858508473373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adb13557e299e74fb4f8a1a60f8f0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 2100000, guid: 6394fcf0e4947c749b6feee1388af08f, type: 2}
+  player2: {fileID: 2100000, guid: 733f41781d194f74aaf78f2a53915dc2, type: 2}

@@ -143,7 +143,7 @@ public class EscenarioTetris : MonoBehaviour
                 return;
             }
             GameObject g = Instantiate(limite, new Vector3(7.99f, 8 - (0.66f +lineasJugador1 * 1.33f), 0), Quaternion.identity);
-            g.GetComponent<limite>().AsignarJugador(0);
+            g.GetComponent<SwapMaterial>().Set(false);
             ++lineasJugador1;
             nave2.LimitarTop(lineasJugador1);
         }
@@ -156,7 +156,7 @@ public class EscenarioTetris : MonoBehaviour
                 return;
             }
             GameObject g = Instantiate(limite, new Vector3(-7.99f, 8 - (0.66f + lineasJugador2 * 1.33f), 0), Quaternion.identity);
-            g.GetComponent<limite>().AsignarJugador(1);
+            g.GetComponent<SwapMaterial>().Set(true);
             ++lineasJugador2;
             nave1.LimitarTop(lineasJugador2);
         }

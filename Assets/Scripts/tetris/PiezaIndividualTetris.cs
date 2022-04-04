@@ -40,11 +40,13 @@ public class PiezaIndividualTetris : MonoBehaviour
                 {
                     if (collision.GetComponent<ShootController>().Player())
                     {
-                        CambiarColor(1);
+                      //  CambiarColor(1);
+                        this.GetComponent<SwapMaterial>().Set(true);
                     }
                     else
                     {
-                        CambiarColor(0);
+                       // CambiarColor(0);
+                        this.GetComponent<SwapMaterial>().Set(false);
                     }
                 }
             }
@@ -66,11 +68,13 @@ public class PiezaIndividualTetris : MonoBehaviour
                 {
                     if (collision.GetComponent<FatShootController>().Player())
                     {
-                        CambiarColor(1);
+                      //  CambiarColor(1);
+                        this.GetComponent<SwapMaterial>().Set(true);
                     }
                     else
                     {
-                        CambiarColor(0);
+                       // CambiarColor(0);
+                        this.GetComponent<SwapMaterial>().Set(false);
                     }
                 }
             }
@@ -80,8 +84,11 @@ public class PiezaIndividualTetris : MonoBehaviour
     }
     public void CambiarColor(int i)
     {
+        print(i);
         jugador = i;
-        this.GetComponent<SpriteRenderer>().sprite = sprites[i];
+        Debug.Log(padre.gameObject.name);
+        this.GetComponent<SwapMaterial>().Set(i == 1);
+       // this.GetComponent<SpriteRenderer>().sprite = sprites[i];
     }
     void RecibirDano()
     {

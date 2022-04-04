@@ -69,11 +69,15 @@ public class PadreTetris : MonoBehaviour
     }
     public void AsignarJugador(int zjugador_)
     {
+        
         jugador = zjugador_;
         for (int i = 0; i < piezasHijas.Count; ++i)
         {
-            if (piezasHijas[i].activeSelf) piezasHijas[i].GetComponent<PiezaIndividualTetris>().CambiarColor( jugador);
 
+            if (piezasHijas[i].activeSelf)
+            {
+               piezasHijas[i].GetComponent<PiezaIndividualTetris>().CambiarColor(jugador); 
+            }
         }
     }
     public void ResetPieza()
