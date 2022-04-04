@@ -23,6 +23,7 @@ public class NaveController : MonoBehaviour
     [SerializeField] float fireRate;
     float timerRate;
 
+    [SerializeField] GameObject explosion;
 
     private void Start()
     {
@@ -187,7 +188,7 @@ public class NaveController : MonoBehaviour
     {
         if (iframes || GodOfGame.instance.fin) return;
         marcador.PerderVida(player2);
-        StartCoroutine(Iframes());
+        if(this.gameObject.activeSelf)StartCoroutine(Iframes());
     }
 
     IEnumerator Iframes()
@@ -197,6 +198,14 @@ public class NaveController : MonoBehaviour
         yield return new WaitForSeconds(iframesTime);
         iframes = false;
         this.GetComponentInChildren<Animator>().SetBool("Damage", false);
+
+    }
+
+    public void Morir()
+    {
+        GameObject g =  Instantiate(explosion, this.transform.position, Quaternion.identity);
+        g.GetComponent<SwapMaterial>().Set(player2);
+        this.gameObject.SetActive(false);
 
     }
 

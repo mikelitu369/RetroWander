@@ -204,6 +204,8 @@ MonoBehaviour:
   iframesTime: 2
   tiposHabilidades: 030000000400000002000000010000000600000005000000
   fireRate: 0.5
+  explosion: {fileID: 3179943836738631444, guid: fe03a6b88ccc4f1438cbe3d4cb7153c7,
+    type: 3}
 --- !u!50 &3064958445434658460
 Rigidbody2D:
   serializedVersion: 4

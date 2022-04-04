@@ -42,6 +42,7 @@ public class Marcador : MonoBehaviour
         ended = true;
         GodOfGame.instance.GetNave(!player).marcador.Refresh();
         GodOfGame.instance.fin = true;
+        GodOfGame.instance.GetNave(player).Morir();
         if (player) Score.player1++;
         else Score.player2++;
         GodOfGame.instance.RecargarPartida(player);
