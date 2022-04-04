@@ -10,6 +10,7 @@ public class FatShootController : MonoBehaviour
     float verticalSpeed;
     protected bool player2;
 
+    
     public void SetPlayer(bool player)
     {
         player2 = player;

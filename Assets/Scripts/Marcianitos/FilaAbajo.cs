@@ -42,9 +42,11 @@ public class FilaAbajo : MonoBehaviour
 
 
             abajo.AnadirMarcianito(marcianos[0]);
+            
             marcianos.RemoveAt(0);
             Recolocar();
             abajo.Recolocar();
+
         }
     }
 
@@ -77,7 +79,7 @@ public class FilaAbajo : MonoBehaviour
        if(!abajo) marcianito.GetComponent<Marciano>().ultimoFilero = true;
 
 
-
+        marcianito.GetComponent<Marciano>().fila = this;
 
         marcianos.Add(marcianito);
     }

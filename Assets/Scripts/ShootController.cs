@@ -11,6 +11,7 @@ public class ShootController : MonoBehaviour
     float verticalSpeed;
     protected bool player2;
 
+    public bool disparaPorMarciano = false;
     public void SetPlayer(bool player)
     {
         player2 = player;
@@ -65,6 +66,10 @@ public class ShootController : MonoBehaviour
         {
             Destroy();
         }
+        else if (collision.CompareTag("marciano") && !disparaPorMarciano)
+        {
+            Destroy();
+        }
     }
     
     public bool Player()
@@ -77,5 +82,6 @@ public class ShootController : MonoBehaviour
         GameObject explosion = PullFX.instance.NewExplosionDisparo(player2);
         explosion.transform.position = transform.position;
         BalasManager.instance.DestroyBala(this.gameObject);
+        disparaPorMarciano = false;
     }
 }

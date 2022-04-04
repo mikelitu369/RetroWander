@@ -8,6 +8,7 @@ TagManager:
   - obstaculo
   - limite
   - bala
+  - marciano
   layers:
   - Default
   - TransparentFX

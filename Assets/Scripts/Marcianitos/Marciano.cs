@@ -9,20 +9,37 @@ public class Marciano : MonoBehaviour
     [SerializeField] float atackRate;
     [SerializeField] float velocidad;
 
-
+    [SerializeField] GameObject posDIsparo;
     float timer;
 
     public bool ultimoFilero;
 
+    public bool apuntandoIzquierda;
+    float random;
+
     public Transform posObjetivo;
 
     int vida;
+    public FilaAbajo fila;
 
     private void Start()
     {
         ultimoFilero = false;
         vida = vidaMaxima;
         timer = 0;
+        random = Random.Range(0, 3);
+
+    }
+
+    public void Reset()
+    {
+        transform.rotation = Quaternion.identity;
+        ultimoFilero = false;
+        vida = vidaMaxima;
+        timer = 0;
+        random = Random.Range(0, 3);
+
+        this.gameObject.SetActive(true);
     }
 
     private void Update()
@@ -38,11 +55,42 @@ public class Marciano : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if(timer > atackRate)
+            if (timer > atackRate + random)
             {
                 //DISPARO
+                GameObject g = BalasManager.instance.NewBala();
+
+                ShootController sc = g.GetComponent<ShootController>();
+                sc.disparaPorMarciano = true;
+                g.transform.position = posDIsparo.transform.position ;
+                g.transform.rotation = Quaternion.identity;
+                sc.SetPlayer(apuntandoIzquierda);
+
+                random = Random.Range(0, 3);
                 timer = 0;
             }
         }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bala"))
+        {
+            if(collision.GetComponent<ShootController>())
+            {
+                if (collision.GetComponent<ShootController>().disparaPorMarciano) return;
+            }
+            --vida;
+
+
+            if(vida < 0)
+            {
+                PoolMarcianos.instanace.anadiarMarciano(this.gameObject);
+                this.gameObject.SetActive(false);
+                fila.HaMuerto(this.gameObject);
+            }
+        }
+        
     }
 }
