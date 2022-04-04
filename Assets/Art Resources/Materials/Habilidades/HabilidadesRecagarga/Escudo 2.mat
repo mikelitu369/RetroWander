@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Metralleta
+  m_Name: Escudo 2
   m_Shader: {fileID: -6465566751694194690, guid: d6754a114f5b0cb4fb6d43b165007c40,
     type: 3}
   m_ShaderKeywords: 
@@ -21,14 +21,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - MainTex:
-        m_Texture: {fileID: 2800000, guid: d3d203ec463e13f4cbab2af3e27560da, type: 3}
+        m_Texture: {fileID: 2800000, guid: 606680cbf0a86394e906a3fff7d26321, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_78063FFE:
-        m_Texture: {fileID: 2800000, guid: d3d203ec463e13f4cbab2af3e27560da, type: 3}
+        m_Texture: {fileID: 2800000, guid: 606680cbf0a86394e906a3fff7d26321, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_C93ABE43: 0
     m_Colors:
-    - Color_861B954A: {r: 0.33128583, g: 2.274207, b: 0.096546486, a: 0}
+    - Color_861B954A: {r: 0.29357743, g: 1.3350784, b: 0, a: 1}

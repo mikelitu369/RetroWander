@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player 1 Wins
+  m_Name: Shader Graphs_NeonSpritesExpansive
   m_Shader: {fileID: -6465566751694194690, guid: d6754a114f5b0cb4fb6d43b165007c40,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,14 +21,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - MainTex:
-        m_Texture: {fileID: 2800000, guid: 8ae19161261329d4b89af57d42a40e13, type: 3}
+        m_Texture: {fileID: 2800000, guid: 51302bc7cdf869a499cc0f2f6f48b3a1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_78063FFE:
-        m_Texture: {fileID: 2800000, guid: 8ae19161261329d4b89af57d42a40e13, type: 3}
+        m_Texture: {fileID: 2800000, guid: 51302bc7cdf869a499cc0f2f6f48b3a1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_C93ABE43: 0
     m_Colors:
-    - Color_861B954A: {r: 0, g: 5.4020357, b: 103.17888, a: 0}
+    - Color_861B954A: {r: 0, g: 36.14118, b: 766.9961, a: 0}
