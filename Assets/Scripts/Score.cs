@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Score
 {
-    static int stagesToWin = 3;
+    static int stagesToWin = 5;
 
     public static int player1, player2;
 

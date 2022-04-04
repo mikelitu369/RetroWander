@@ -80,7 +80,6 @@ public class PacMan : MonoBehaviour
     {
         sprite.transform.rotation = Quaternion.identity;
         float anguloExtra = 18 * (cabreoConJugadorUno - cabreoConJugador2);
-        Debug.Log(anguloExtra);
         if (sprite.transform.position.y < 0)
         {
             direccion = 1;

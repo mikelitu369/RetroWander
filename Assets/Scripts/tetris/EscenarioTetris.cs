@@ -113,8 +113,6 @@ public class EscenarioTetris : MonoBehaviour
         }
         if(!encontrada)
         {
-
-
             bool noEntra = false;
             int numero;
             do
@@ -181,7 +179,6 @@ public class EscenarioTetris : MonoBehaviour
                     {
                         int jugador1points = 0;
                         int jugador2points = 0;
-                        Debug.Log("proceso normal");
                         for(int j = 0; j < lleno.Length; ++j)
                         {
                             piezasIndividuales.Remove(lleno[j]);
@@ -197,7 +194,6 @@ public class EscenarioTetris : MonoBehaviour
                                 ++jugador2points;
                             }
                             lleno[j] = null;
-
                         }
                         if(jugador2points > jugador1points)
                         {
