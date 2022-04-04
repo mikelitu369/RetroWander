@@ -84,7 +84,7 @@ public class Marciano : MonoBehaviour
             --vida;
 
 
-            if(vida < 0)
+            if(vida <= 0)
             {
                 PoolMarcianos.instanace.anadiarMarciano(this.gameObject);
                 this.gameObject.SetActive(false);

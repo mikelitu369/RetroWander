@@ -36,6 +36,8 @@ public class ghost : MonoBehaviour
     private void Start()
     {
         NuevaPosicion();
+        marioneta.transform.position = posObjetivo;
+        NuevaPosicion();
     }
 
     private void Update()

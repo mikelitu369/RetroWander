@@ -11,7 +11,7 @@ public class cobertura : MonoBehaviour
         if (collision.CompareTag("bala"))
         {
             --vida;
-            if (vida < 0)
+            if (vida <= 0)
             {
 
                 this.gameObject.SetActive(false);

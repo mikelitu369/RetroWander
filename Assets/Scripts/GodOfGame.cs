@@ -7,6 +7,7 @@ public class GodOfGame : MonoBehaviour
 {
 
     public static GodOfGame instance;
+    public static int lastStage = 3;
 
     public bool fin;
 
@@ -24,7 +25,14 @@ public class GodOfGame : MonoBehaviour
     private void Start()
     {
         fin = false;
-        Instantiate(juegos[Random.Range(0, juegos.Length)], this.transform);
+        int random;
+        do
+        {
+            random = Random.Range(0, juegos.Length);
+        } while (random == lastStage);
+        
+        Instantiate(juegos[random], this.transform);
+        lastStage = random;
     }
     public void RecargarPartida(bool player)
     {
