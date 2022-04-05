@@ -5300,6 +5300,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 32b56be49b6d61444acee5e8e0f9f2ee, type: 3}
   - {fileID: 8300000, guid: 0d7bcbf3c0a23cb4c875cbe04ab3f994, type: 3}
   - {fileID: 8300000, guid: 5718fd3850a92954786470429e0fe6a0, type: 3}
+  - {fileID: 8300000, guid: 9db390aef1ccbbe46ac20971460a05b8, type: 3}
   sonido: {fileID: 4530544090531053662, guid: 00720e00f3afe084f9c3eeff34967c13, type: 3}
 --- !u!4 &1191098232
 Transform:
