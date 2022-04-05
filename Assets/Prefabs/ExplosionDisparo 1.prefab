@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: -2459083173328072888}
   - component: {fileID: 1566668962618141876}
   m_Layer: 0
-  m_Name: ExplosionDisparo
+  m_Name: ExplosionDisparo 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.05
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4131,7 +4131,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
