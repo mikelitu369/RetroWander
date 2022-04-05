@@ -39,6 +39,7 @@ public class Marcador : MonoBehaviour
     void End(bool player)
     {
         if (ended) return;
+        Sonidero.instance.NewSound(Sonidero.audios.muerte);
         ended = true;
         GodOfGame.instance.GetNave(!player).marcador.Refresh();
         GodOfGame.instance.fin = true;

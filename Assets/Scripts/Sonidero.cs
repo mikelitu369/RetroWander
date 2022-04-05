@@ -13,7 +13,8 @@ public class Sonidero : MonoBehaviour
         racimo = 3,
         perderVida = 4,
         escudo = 5,
-        redireccion = 6
+        redireccion = 6,
+        muerte= 7
     }
 
     public static Sonidero instance;
