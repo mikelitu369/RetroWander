@@ -134,27 +134,31 @@ public class EscenarioTetris : MonoBehaviour
     {
         if (i == 0)
         {
-            if(lineasJugador1 > 9)
-            {
-                Debug.Log("GANA EL JUGADOR 1");
-                GodOfGame.instance.RecargarPartida(false);
-                return;
-            }
             GameObject g = Instantiate(limite, new Vector3(7.99f, 8 - (0.66f +lineasJugador1 * 1.33f), 0), Quaternion.identity);
             g.GetComponent<SwapMaterial>().Set(false);
+            if(lineasJugador1 > 9)
+            {
+                nave2.Morir();
+                
+                Debug.Log("GANA EL JUGADOR 1");
+                GodOfGame.instance.RecargarPartida(true);
+                return;
+            }
             ++lineasJugador1;
             nave2.LimitarTop(lineasJugador1);
         }
         else
         {
+            GameObject g = Instantiate(limite, new Vector3(-7.99f, 8 - (0.66f + lineasJugador2 * 1.33f), 0), Quaternion.identity);
+            g.GetComponent<SwapMaterial>().Set(true);
             if (lineasJugador2 > 9)
             {
-                GodOfGame.instance.RecargarPartida(true);
+                nave1.Morir();
+                
+                GodOfGame.instance.RecargarPartida(false);
                 Debug.Log("GANA EL JUGADOR 2");
                 return;
             }
-            GameObject g = Instantiate(limite, new Vector3(-7.99f, 8 - (0.66f + lineasJugador2 * 1.33f), 0), Quaternion.identity);
-            g.GetComponent<SwapMaterial>().Set(true);
             ++lineasJugador2;
             nave1.LimitarTop(lineasJugador2);
         }

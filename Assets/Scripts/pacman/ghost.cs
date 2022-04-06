@@ -15,7 +15,6 @@ public class ghost : MonoBehaviour
 
     public void NuevaPosicion()
     {
-        Debug.Log("NUEVA POSICION");
         int randomDireccion = Random.Range(0, 2);
 
 
