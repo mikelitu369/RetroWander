@@ -14,6 +14,7 @@ public class Marcador : MonoBehaviour
     
     public void Set(int puntos)
     {
+        puntos2 = puntos;
         this.puntos.text = puntos.ToString();
         if (marcas == null) marcas = stages.transform.GetComponentsInChildren<Image>();
         foreach (Image t in marcas) t.gameObject.SetActive(false);

@@ -11,6 +11,8 @@ public class GodOfGame : MonoBehaviour
 
     public bool fin;
 
+    bool finalPartida = false;
+
     public NaveController nave1, nave2;
     [SerializeField] GameObject TextoPlayer1Win;
     [SerializeField] GameObject TextoPlayer2Win;
@@ -48,7 +50,7 @@ public class GodOfGame : MonoBehaviour
         {
             if (player) TextoPlayer1Win.GetComponent<Animator>().SetInteger("Estado", -1);
             else TextoPlayer2Win.GetComponent<Animator>().SetInteger("Estado", -1);
-            StartCoroutine(AcabarRonda("Menu"));
+            StartCoroutine(AcabarPartida());
         }
     }
 
@@ -60,7 +62,13 @@ public class GodOfGame : MonoBehaviour
         SceneManager.LoadScene(s);
     }
 
-public NaveController GetNave(bool player)
+    IEnumerator AcabarPartida()
+    {
+        yield return new WaitForSeconds(5);
+        finalPartida = true;
+    }
+
+    public NaveController GetNave(bool player)
     {
         if (nave1.Player2() == player) return nave1;
         else return nave2;
@@ -71,6 +79,11 @@ public NaveController GetNave(bool player)
         if(Input.GetKeyDown(nave1.Accion()) || Input.GetKeyDown(nave2.Accion()))
         {
             SwapPausa();         
+        }
+
+        if(finalPartida && Input.anyKeyDown)
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 

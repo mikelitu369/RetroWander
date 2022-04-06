@@ -29,6 +29,12 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
+        if(EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(firstButton);
+        }
+
         if( Input.GetKeyDown(KeyCode.U) ||
             Input.GetKeyDown(KeyCode.I) ||
             Input.GetKeyDown(KeyCode.O) ||
