@@ -138,10 +138,10 @@ public class EscenarioTetris : MonoBehaviour
             g.GetComponent<SwapMaterial>().Set(false);
             if(lineasJugador1 > 9)
             {
-                nave2.Morir();
+
+                nave2.ReciveHit(3);
                 
                 Debug.Log("GANA EL JUGADOR 1");
-                GodOfGame.instance.RecargarPartida(true);
                 return;
             }
             ++lineasJugador1;
@@ -153,9 +153,8 @@ public class EscenarioTetris : MonoBehaviour
             g.GetComponent<SwapMaterial>().Set(true);
             if (lineasJugador2 > 9)
             {
-                nave1.Morir();
-                
-                GodOfGame.instance.RecargarPartida(false);
+                nave1.ReciveHit(3);
+
                 Debug.Log("GANA EL JUGADOR 2");
                 return;
             }

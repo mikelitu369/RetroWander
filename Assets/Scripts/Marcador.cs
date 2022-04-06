@@ -22,15 +22,15 @@ public class Marcador : MonoBehaviour
         print(marcas.Length);
     }
 
-    public void PerderVida(bool player)
+    public void PerderVida(bool player, int i)
     {
         foreach(GameObject g in vidas)
         {
-            if (g.activeSelf)
+            if (g.activeSelf && i > 0)
             {
+                --i;
                 Sonidero.instance.NewSound(Sonidero.audios.perderVida);
                 g.SetActive(false);
-                break;
             }
         }
 

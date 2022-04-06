@@ -184,10 +184,10 @@ public class NaveController : MonoBehaviour
 
     }
 
-    public void ReciveHit()
+    public void ReciveHit(int i = 1)
     {
         if (iframes || GodOfGame.instance.fin) return;
-        marcador.PerderVida(player2);
+        marcador.PerderVida(player2, i);
         if(this.gameObject.activeSelf)StartCoroutine(Iframes());
     }
 
