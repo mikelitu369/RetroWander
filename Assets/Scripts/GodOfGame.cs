@@ -16,6 +16,8 @@ public class GodOfGame : MonoBehaviour
     public NaveController nave1, nave2;
     [SerializeField] GameObject TextoPlayer1Win;
     [SerializeField] GameObject TextoPlayer2Win;
+    [SerializeField] GameObject TextoPlayer1WinScore;
+    [SerializeField] GameObject TextoPlayer2Score;
     [SerializeField] GameObject menuPausa;
     [SerializeField] GameObject[] juegos;
 
@@ -42,13 +44,13 @@ public class GodOfGame : MonoBehaviour
         Time.timeScale = 0.5f;
         if (!Score.Fin())
         {
-            if(player)TextoPlayer1Win.GetComponent<Animator>().SetInteger("Estado", -1);
-            else TextoPlayer2Win.GetComponent<Animator>().SetInteger("Estado", -1);
+            if (player) TextoPlayer1WinScore.GetComponent<Animator>().SetInteger("Estado", -1);
+            else TextoPlayer2Score.GetComponent<Animator>().SetInteger("Estado", -1);
             StartCoroutine(AcabarRonda(SceneManager.GetActiveScene().name));
         }
         else
         {
-            if (player) TextoPlayer1Win.GetComponent<Animator>().SetInteger("Estado", -1);
+            if(player)TextoPlayer1Win.GetComponent<Animator>().SetInteger("Estado", -1);
             else TextoPlayer2Win.GetComponent<Animator>().SetInteger("Estado", -1);
             StartCoroutine(AcabarPartida());
         }
